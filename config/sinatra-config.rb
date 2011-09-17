@@ -9,7 +9,7 @@ require 'uri'
 ## SINATRA SETTINGS
 ##   Settings that are more specific to Sinatra than anythign else
 ##----
-set :environment, ENV["RACK_ENV"].to_sym || :development
+set :environment, ENV["RACK_ENV"] ? ENV["RACK_ENV"].to_sym : :development
 set :root, File.expand_path(File.join(File.dirname(__FILE__), '..'))
 set :public, File.join(settings.root, 'public')
 set :views, File.join(settings.root, 'views')
