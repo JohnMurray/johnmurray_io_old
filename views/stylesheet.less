@@ -1,0 +1,112 @@
+
+
+/**
+ * Constants
+ */
+@background-color:  #fff;
+@dark-gray:         #333;
+@nice-blue:         #5B83AD;
+
+
+
+
+/**
+ * Static Mixins
+ */
+ 
+
+
+/**
+ * Parametric Mixins
+ */
+.dotted_underline (@color) {
+  border-bottom: 1px dotted @color;
+}
+.pre_slash (@color) {
+  &::before {
+    content:  "/";
+    color:    @color;
+  }
+}
+
+
+
+/**
+ * Global Styles
+ */
+body {
+  margin: 0 auto;
+  font-family: 'Georgia', Times, serif;
+  font-size: 20px;
+  line-height: 1.6em;
+  padding: 15px;
+  width: 720px;
+  
+}
+
+a {
+  text-decoration: none;
+  .dotted_underline(@dark-gray);
+}
+
+
+/**
+ * Index styles
+ */
+#splash-stuff {
+  bottom:    220px;
+  display:   block;
+  position:  absolute;
+  right:     75px;
+
+  div.title {
+    display:      block;
+    font-size:    60px;
+    line-height:  1.6em;
+
+    .dotted_underline(@dark-gray);
+
+    span.domain {
+      display:  inline-block;
+      color:    @dark-gray;
+    }
+
+    span.tld {
+      display:  inline-block;
+      color:    @nice-blue;
+    }
+  }
+
+  div.nav {
+    font-size:   32px;
+    margin-top:  20px;
+    
+    ul {
+      display:     block;
+      float:       right;
+      margin:      0;
+      padding:     0;
+      list-style:  none;
+      
+      li {
+        display:  inline-block;
+        margin:   0 0 0 10px;
+        padding:  0;
+
+        a {
+          border:   none;
+          color:    @dark-gray;
+          display:  inline-block;
+
+          .pre_slash(@background-color);
+
+          &:active, &:focus, &:hover {
+            color: @nice-blue;
+
+            .pre_slash(@dark-gray);
+          }
+        }
+      }
+    }
+  }
+}
