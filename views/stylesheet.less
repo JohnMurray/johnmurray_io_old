@@ -5,6 +5,7 @@
  */
 @background-color:  #fff;
 @dark-gray:         #333;
+@light-gray:        #999;
 @nice-blue:         #5B83AD;
 
 
@@ -45,8 +46,32 @@ body {
 }
 
 a {
+  color:           @dark-gray;
   text-decoration: none;
+  
   .dotted_underline(@dark-gray);
+  
+  &:active, &:focus, &:hover {
+    color: @nice-blue;
+  }
+}
+
+// Style for site-title/back-link at top of each page
+#page-title {
+  display:        block;
+  font-size:      35px;
+  line-height:    1.4em;
+  margin-bottom:  40px;
+  margin-top:     100px;
+
+  .root-page {
+    display:  inline-block;
+  }
+
+  .current-page {
+    display:  inline-block;
+    color:    @nice-blue;
+  }
 }
 
 
@@ -101,7 +126,7 @@ a {
           .pre_slash(@background-color);
 
           &:active, &:focus, &:hover {
-            color: @nice-blue;
+            color:  @nice-blue;
 
             .pre_slash(@dark-gray);
           }
@@ -110,3 +135,32 @@ a {
     }
   }
 }
+
+/*
+ * Log Styles
+ */
+#log-list {
+
+
+  .log {
+    display:  block;
+    margin:   0 0 10px 0;
+
+    .title {
+      display:  inline-block;
+      padding:  0 0 3px 0;
+    }
+  
+    .date {
+      color:       @light-gray;
+      display:     inline-block;
+      float:       right;
+      font-size:   .8em;
+    }
+  }
+}
+
+
+
+
+

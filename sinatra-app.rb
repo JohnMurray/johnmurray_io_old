@@ -1,5 +1,6 @@
 require 'haml'
 require 'less'
+require 'maruku'
 require 'sinatra'
 require './config/sinatra-config.rb'
 
@@ -22,11 +23,19 @@ get '/log' do
       date:  Time.new(match_data[:year], match_data[:month], match_data[:day])
     }
   end
-  #haml :log
-  @files.inspect.to_s
+  haml :log
 end
 
 get '/log/:year/:month/:day/:title' do
+  markdown_file = File.open(File.join(
+    "blogs",
+    params[:year],
+    params[:month],
+    params[:day],
+    params[:title])).read
+  doc = Maruku.new(markdown_file)
+  @doc = doc.to_html
+  haml :log_entry
 end
 
 
