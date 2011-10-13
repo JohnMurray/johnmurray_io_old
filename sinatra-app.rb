@@ -45,3 +45,8 @@ end
 get '/stylesheet.css' do
   less :stylesheet
 end
+
+
+get '/google2457dd570105c571.html' do
+  File.open('google2457dd570105c571.html').read
+end

@@ -36,23 +36,24 @@
  * Global Styles
  */
 body {
-  margin: 0 auto;
-  font-family: 'Georgia', Times, serif;
-  font-size: 20px;
-  line-height: 1.6em;
-  padding: 15px;
-  width: 720px;
+  color:        @dark-gray;
+  margin:       0 auto;
+  font-family:  'Georgia', Times, serif;
+  font-size:    20px;
+  line-height:  1.6em;
+  padding:      15px;
+  width:        720px;
   
 }
 
 a {
-  color:           @dark-gray;
-  text-decoration: none;
+  color:            @dark-gray;
+  text-decoration:  none;
   
   .dotted_underline(@dark-gray);
   
   &:active, &:focus, &:hover {
-    color: @nice-blue;
+    color:  @nice-blue;
   }
 }
 
@@ -161,6 +162,25 @@ a {
 }
 
 
+/*
+ * Contact Styles
+ */
+#contact {
+  display:     block;
+  margin-top:  100px;
 
+  .email {
+
+    .label {
+      display:      inline-block;
+      font-size:    22px;
+      margin:       0 20px 0 0;
+    }
+    .content {
+      color:      @light-gray;
+      font-size:  16px;
+    }
+  }
+}
 
 
