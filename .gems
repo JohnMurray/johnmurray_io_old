@@ -1,4 +1,3 @@
-# .gems generated gem export file. Note that any env variable settings will be missing. Append these after using a ';' field separator
 activemodel -v 3.1.0
 activemodel -v 3.0.9
 activerecord -v 3.1.0
