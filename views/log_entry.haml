@@ -1,1 +1,9 @@
-%div= @doc
+%div{:id => 'page-title'}
+  %a{:href => '/'}
+    %span{:class => 'root-page'} johnmururay.io
+  %a{:href => '/log', :class => 'parent-page'}
+    %span /log
+  %span{:class => 'current-page'} /#{@doc_title}
+
+%div{:id => 'log-entry'}
+  =@doc

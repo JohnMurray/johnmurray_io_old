@@ -1,6 +1,8 @@
 require 'active_record'
 require 'yaml'
 require 'logger'
+require 'uri'
+require 'net/http'
 
 $: << '.'
 require 'lib/heroku-helper'
@@ -27,4 +29,11 @@ namespace "db" do
     end
   end
 
+end
+
+task :cron do
+  uri = URI.parse("http://johnmurray.io/keep-alive")
+  res = Net::HTTP.start(url.host, url.port) do |http|
+    http.get('/keep-alive')
+  end
 end
