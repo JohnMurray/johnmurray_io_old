@@ -33,7 +33,7 @@ fi
 #
 # Install the set of gems specified by the RVM .gems file
 #
-filename=".gems"
+filename=".rvm_gems"
 if [[ -s "$filename" ]] ; then
   rvm gemset import "$filename" | grep -v already | grep -v listed | grep -v complete | sed '/^$/d'
 fi
