@@ -20,7 +20,7 @@ i18n -v 0.6.0
 i18n -v 0.5.0
 launchy -v 2.0.5
 less -v 2.0.6
-libv8 -v x86_64-darwin-10
+libv8 -v x86_64
 logger -v 1.2.8
 maruku -v 0.6.0
 mime-types -v 1.16
