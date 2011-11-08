@@ -12,9 +12,7 @@ require './lib/prettifier-helper.rb'
 ## Heroku App
 ##----
 before do
-  headers(
-    'Cache-Control' => 'public; max-age=300'
-  )
+  cache_control :public, :max_age => 31536000
 end
 
 
