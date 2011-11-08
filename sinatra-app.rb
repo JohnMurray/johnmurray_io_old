@@ -5,6 +5,20 @@ require 'sinatra'
 require './config/sinatra-config.rb'
 require './lib/prettifier-helper.rb'
 
+
+
+##----
+## Set the cache-control for Varnish to cache the pages in my
+## Heroku App
+##----
+before do
+  headers(
+    'Cache-Control' => 'public, max-age=31536000'
+  )
+end
+
+
+
 ##----
 ## This is the root page. It just shows a big the site name and the
 ## navigation. Hopefully it will show a pic picture at some point.
@@ -80,5 +94,5 @@ end
 ##   my applicaiton. 
 ##----
 get '/keep-alive' do
-  "I'm alive!"
+  "I'm alive! @ #{Time.now}"
 end
