@@ -1,0 +1,14 @@
+%div{:id => 'page-title'}
+  %a{:href => '/'}
+    %span{:class => 'root-page'} johnmururay.io
+  %span{:class => 'current-page'} /*
+
+%div{:id => 'page-description'}
+  Herein lies some random bytes of data about me (and possibly other items) that don't fit into my site otherwise. Some of it might be of interest, other pieces may be a tad less interesting. Either way, enjoy!
+
+%div{:id => 'log-list'}
+  - @files.sort{|a,b| b[:date] <=> a[:date]}.each do |f|
+    %div{:class => 'log'}
+      %a{:href => f[:path]}
+        %div{:class => 'title'}=f[:name]
+      %div{:class => 'date'}

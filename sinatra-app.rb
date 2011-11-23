@@ -76,6 +76,7 @@ get '/log/:year/:month/:day/:title' do
 end
 
 
+
 ##----
 ## Server LESS CSS files as css
 ##----
@@ -85,12 +86,41 @@ end
 
 
 
+##----
+## Load a specific random data-set.
+##----
+get '/*/:name' do
+  markdown_file = File.open(File.join(
+    'random',
+    params[:name])).read
+  doc = Maruku.new(markdown_file)
+  @doc = doc.to_html
+  @doc_title = params[:name]
+                .gsub(/([^-])-([^-])/, '\1 \2')
+                .gsub('--', '-')
+                .gsub('.md', '')
+  haml :random_entry
+end
+
+
 
 ##----
-## Keep-Alive Request
-##   A cron'd request to this page will keep Heroku from unloading
-##   my applicaiton. 
+## A directory of everything else that doesn't fit into the site.
+## This may inlclude old sites, research, random stuff, etc.
 ##----
-get '/keep-alive' do
-  "I'm alive! @ #{Time.now}"
+get '/*' do
+  @files = []
+  regex = /random\/(?<name>.+\.md)/
+  Dir[File.join('random', '*.md')].each do |file|
+    match = regex.match file
+    @files << {
+      path: "/*/#{match[:name]}",
+      name: match[:name]
+              .gsub(/([^-])-([^-])/, '\1 \2')
+              .gsub('--', '-')
+              .gsub('.md', '')
+    } if match
+  end
+
+  haml :random
 end

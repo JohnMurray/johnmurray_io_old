@@ -5,6 +5,7 @@
  */
 @background-color:  #fff;
 @dark-gray:         #333;
+@medium-gray:       #666;
 @light-gray:        #999;
 @nice-blue:         #5B83AD;
 
@@ -41,7 +42,7 @@ body {
   font-family:  'Georgia', Times, serif;
   font-size:    20px;
   line-height:  1.6em;
-  padding:      15px;
+  padding:      0 15px 100px 15px;
   width:        720px;
   
 }
@@ -106,6 +107,16 @@ blockquote {
     color:    @nice-blue;
   }
 }
+/*
+ * Style for optional page description at top of each page
+ */
+#page-description {
+  color:          @light-gray;
+  font-size:      16px;
+  font-style:     italic;
+  margin-bottom:  20px;
+}
+
 
 
 /**
@@ -167,6 +178,7 @@ blockquote {
       }
     }
   }
+
 }
 
 /*
@@ -247,5 +259,9 @@ blockquote {
   h5 {
     font-size:    22px;
     line-height:  1.7em;
+  }
+
+  p {
+     color:  @medium-gray;
   }
 }
