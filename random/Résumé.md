@@ -38,22 +38,10 @@
 
       <p><b>Miscellaneous Tech</b></p>
       <ul>
-        <li>HTML/XHTML, CSS, JavaScript (jQeury), Git, Gitosis, Sinatra, MongoDB</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="heading">
-      Related Experience
-    </div>
-    <div class="content">
-      <p><b>Research Assistant</b>, Northern Kentucky University, Highland Heights, KY (2009-2011)</p>
-      <ul>
-        <li>Developed Ruby scripts to build open source Java software and perform build-time static analysis resulting two publications (viewable <a href="/*/Research.md">here</a>)</li>
-        <li>Applied data mining software (WEKA) to find correlations in software and vulnerability metrics, such as churn rate and vulnerability density. </li>
-        <li>Worked with DLX algorithm for solving N+K Queens Problem and determined it could not be efficiently used to solve Alternating Sign Matrix problems.</li>
-        <li>Automated the data gathering, static analysis tool run, and post-processing steps to run in parallel</li>
+        <li>HTML/XHTML, CSS, JavaScript (jQeury), HAML, Less</li>
+        <li>Sinatra, WCF, .NET MVC 3</li>
+        <li>MongoDB, MySQL</li>
+        <li>Git, Gitosis, SVN</li>
       </ul>
     </div>
   </div>
@@ -65,7 +53,9 @@
     <div class="content">
       <p><b>Software Developer</b>, Mavizon Technologies, New Albany, IN (2011-Present)</p>
       <ul>
-        <li></li>
+        <li>Developed various platforms including the Advertising Platform and the Real Time Event Platform</li>
+        <li>Developed backend and internal systems and tools as well as maintained public APIs</li>
+        <li>Teacher of all things Git</li>
       </ul>
 
       <span class="spacer"></span>
@@ -82,6 +72,21 @@
       <ul>
         <li>Provide one on one instruction and assistance to first and second year programming students</li>
         <li>Assist first and second year programming students once weekly in a lab environment working with Python and Java</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="section">
+    <div class="heading">
+      Related Experience
+    </div>
+    <div class="content">
+      <p><b>Research Assistant</b>, Northern Kentucky University, Highland Heights, KY (2009-2011)</p>
+      <ul>
+        <li>Developed Ruby scripts to build open source Java software and perform build-time static analysis resulting two publications (viewable <a href="/*/Research.md">here</a>)</li>
+        <li>Applied data mining software (WEKA) to find correlations in software and vulnerability metrics, such as churn rate and vulnerability density. </li>
+        <li>Worked with DLX algorithm for solving N+K Queens Problem and determined it could not be efficiently used to solve Alternating Sign Matrix problems.</li>
+        <li>Automated the data gathering, static analysis tool run, and post-processing steps to run in parallel</li>
       </ul>
     </div>
   </div>
