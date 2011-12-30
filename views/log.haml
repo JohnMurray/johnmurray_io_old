@@ -1,7 +1,7 @@
 %div{:id => 'page-title'}
   %a{:href => '/'}
     %span{:class => 'root-page'} johnmururay.io
-  %span{:class => 'current-page'} /log
+  %h1{:class => 'current-page'} /log
 
 %div{:id => 'log-list'}
   - @files.sort{|a,b| b[:date] <=> a[:date]}.each do |f|

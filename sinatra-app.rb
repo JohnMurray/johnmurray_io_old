@@ -40,7 +40,7 @@ end
 get '/log' do
   @files = []
   regex = /blogs\/(?<year>\d+)\/(?<month>\d+)\/(?<day>\d+)\/(?<title>.*\.md)/
-  Dir[File.join("blogs", "**", "*.md")].each do |file|
+  Dir[File.join("blogs", "**", "[^_]*.md")].each do |file|
     match = regex.match file
     @files << {
       path:  "/log/#{match[:year]}/#{match[:month]}/#{match[:day]}/#{match[:title]}",
