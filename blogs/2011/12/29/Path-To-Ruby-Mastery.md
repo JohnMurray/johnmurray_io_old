@@ -7,6 +7,7 @@ This log entry will serve as a reminder as to the steps I must take to reach the
 # The Roadmap
 
 * Re-read [_Design Patterns in Ruby_] [1]
+* Know [The Difference Between Procs and Lambdas] [5]
 * Read [_Eloquent Ruby_] [2]
 * Read [_Metaprogramming Ruby_] [4]
 * Study Ruby on Rails ActiveRecord's use of meta-programming and DSLs
@@ -24,3 +25,4 @@ If you've read this and feel like I have left something out or have a suggestion
   [2]: http://www.amazon.com/Eloquent-Ruby-Addison-Wesley-Professional/dp/0321584104
   [3]: http://rubyeventmachine.com/
   [4]: http://pragprog.com/book/ppmetr/metaprogramming-ruby
+  [5]: http://www.skorks.com/2010/05/ruby-procs-and-lambdas-and-the-difference-between-them/
