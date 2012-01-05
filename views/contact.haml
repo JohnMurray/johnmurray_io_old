@@ -3,6 +3,9 @@
     %span{:class => 'root-page'} johnmururay.io
   %h1{:class => 'current-page'} /contact
 
+%div{:id => 'page-description', :class => @notes.empty? ? "desc-empty" : "desc-full"}
+  = @notes
+
 %div{:id => 'contact'}
   %div{:class => 'email'}
     %span{:class => 'label'} Email

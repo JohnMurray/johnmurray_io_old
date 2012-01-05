@@ -3,6 +3,9 @@
     %span{:class => 'root-page'} johnmururay.io
   %h1{:class => 'current-page'} /log
 
+%div{:id => 'page-description', :class => @notes.empty? ? "desc-empty" : "desc-full"}
+  = @notes
+
 %div{:id => 'log-list'}
   - @files.sort{|a,b| b[:date] <=> a[:date]}.each do |f|
     %div{:class => 'log'}

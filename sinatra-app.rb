@@ -10,9 +10,12 @@ require './lib/prettifier-helper.rb'
 ##----
 ## Set the cache-control for Varnish to cache the pages in my
 ## Heroku App
+## 
+## Configure default notes to show at top of page.
 ##----
 before do
   cache_control :public, :max_age => 86400
+  @notes = ""
 end
 
 
@@ -60,12 +63,19 @@ end
 ##----
 get '/log/:year/:month/:day/:title' do
   @js_s = PrettifierHelper.get_scripts ['ruby', 'scala', 'css', 'yaml']
-  markdown_file = File.open(File.join(
-    "blogs",
+
+  file_name = File.join(
+    'blogs',
     params[:year],
     params[:month],
     params[:day],
-    params[:title])).read
+    params[:title])
+
+  if File.exist? "#{file_name}.notes"
+    @notes = File.open("#{file_name}.notes").read
+  end
+
+  markdown_file = File.open(file_name).read
   doc = Maruku.new(markdown_file)
   @doc = doc.to_html
   @doc_title = params[:title]
@@ -131,9 +141,13 @@ end
 ## Load a specific random data-set.
 ##----
 get '/*/:name' do
-  markdown_file = File.open(File.join(
-    'random',
-    params[:name])).read
+  file_name = File.join('random', params[:name])
+
+  if File.exist? "#{file_name}.notes"
+    @notes = File.open("#{file_name}.notes").read
+  end
+
+  markdown_file = File.open(file_name).read
   doc = Maruku.new(markdown_file)
   @doc = doc.to_html
   @doc_title = params[:name]
@@ -150,6 +164,11 @@ end
 ## This may inlclude old sites, research, random stuff, etc.
 ##----
 get '/*' do
+  @notes = "Herein lies some random bytes of data about me (and possibly other 
+            items) that don't fit into my site otherwise. Some of it might be 
+            of interest, other pieces you may find a tad mundane. Either way, 
+            enjoy!"
+
   @files = []
   regex = /random\/(?<name>.+\.md)/
   Dir[File.join('random', '*.md')].each do |file|

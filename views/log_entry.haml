@@ -5,5 +5,8 @@
     %span /log
   %h1{:class => 'current-page'} /#{@doc_title}
 
+%div{:id => 'page-description', :class => @notes.empty? ? "desc-empty" : "desc-full"}
+  = @notes
+
 %div{:id => 'log-entry'}
   =@doc
