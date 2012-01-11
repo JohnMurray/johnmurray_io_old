@@ -56,7 +56,7 @@ end
 ## not be visible from the main site. It is solely for the purpose of demo'ing
 ## my log entries to myself to ensure proper formatting.
 ##----
-get '/log/beta' do
+get '/log/pre' do
   @files = []
   regex = /blogs\/in-the-works\/(?<title>.*\.md)/
   Dir[File.join('blogs', 'in-the-works', '_*.md')].each do |file|
@@ -79,7 +79,7 @@ end
 ## Load a specific 'log entry' that is in the works for review. As the normal
 ## log entries, this is just a markdown file.
 ##----
-get '/log/beta/:title' do
+get '/log/pre/:title' do
   @js_s = PrettifierHelper.get_scripts ['ruby', 'scala', 'css', 'yaml']
   markdown_file = File.open(File.join(
     'blogs',
