@@ -62,7 +62,7 @@ get '/log/pre' do
   Dir[File.join('blogs', 'in-the-works', '_*.md')].each do |file|
     match = regex.match file
     @files << {
-      path:  "/log/beta/#{match[:title]}",
+      path:  "/log/pre/#{match[:title]}",
       name:  match[:title]
                .gsub(/([^-])-([^-])/, '\1 \1')
                .gsub('--', '-')
