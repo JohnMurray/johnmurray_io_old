@@ -1,4 +1,5 @@
 source :rubygems
+
 gem 'haml', '3.1.2'
 gem 'heroku', '2.8.0'
 gem 'less', '2.0.6'
@@ -8,3 +9,8 @@ gem 'rake', '0.9.2'
 gem 'sinatra', '1.2.6'
 gem 'thin', '1.2.11'
 gem 'activerecord', '3.1.0'
+
+
+group :development do
+  gem 'pry', '>= 0.9.7.4'
+end
