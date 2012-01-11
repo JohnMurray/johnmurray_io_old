@@ -4,7 +4,7 @@
 ##----
 get '/rss' do
   regex = /blogs\/(?<y>\d+)\/(?<m>\d+)\/(?<d>\d+)\/(?<t>.*\.md)/
-  @logs = Dir[File.join("blogs", "**", "[^_]*.md")]
+  @logs = Dir[File.join("blogs", "**", "[^_]*.md")].sort.reverse
  
   builder do |xml|
     xml.instruct! :xml, :version => '1.0'
