@@ -2,6 +2,9 @@
   %a{:href => '/'}
     %span{:class => 'root-page'} johnmururay.io
   %h1{:class => 'current-page'} /log
+  %span{:class => 'rss' }
+    %a{:href => '/rss'}
+      [rss]
 
 %div{:id => 'page-description', :class => @notes.empty? ? "desc-empty" : "desc-full"}
   = @notes
