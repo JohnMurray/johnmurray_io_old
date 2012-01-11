@@ -16,7 +16,7 @@ get '/rss' do
         xml.tag! "atom:link", 
           :href => 'http://johnmurray.io/rss',
           :rel  => 'self', 
-          :type => 'application/xml+rss'
+          :type => 'application/rss+xml'
 
         @logs.each do |log|
           m = regex.match log
