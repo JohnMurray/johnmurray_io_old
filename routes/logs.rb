@@ -1,6 +1,9 @@
 require 'uri'
 
 
+$: << ::File.expand_path('../../lib', __FILE__)
+require 'log-helper'
+
 ##----
 ## A directory of all 'log entries' that are currently in progress. This will
 ## not be visible from the main site. It is solely for the purpose of demo'ing
@@ -14,10 +17,7 @@ get '/logs/pre' do
     title_url = URI.escape(match[:title], Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))
     @files << {
       path:  "/log/pre/#{title_url}",
-      name:  match[:title],
-               #.gsub(/([^-])-([^-])/, '\1 \1')
-               #.gsub('--', '-')
-               #.gsub('.md', ''),
+      name:  format_title(match[:title]),
       date:  Time.now
     }
   end
@@ -41,10 +41,7 @@ get '/log/pre/*' do
     title)).read
   doc = Maruku.new(markdown_file)
   @doc = doc.to_html
-  @doc_title = title
-                 .gsub(/([^-])-([^-])/, '\1 \2')
-                 .gsub('--', '-')
-                 .gsub('.md', '')
+  @doc_title = format_title(title)
   haml :log_entry
 end
 
@@ -60,10 +57,7 @@ get '/log' do
     match = regex.match file
     @files << {
       path:  "/log/#{match[:year]}/#{match[:month]}/#{match[:day]}/#{match[:title]}",
-      name:  match[:title]
-               .gsub(/([^-])-([^-])/, '\1 \2')
-               .gsub('--', '-')
-               .gsub('.md', ''),
+      name:  format_title(match[:title]),
       date:  Time.new(match[:year], match[:month], match[:day])
     }
   end
@@ -93,10 +87,7 @@ get '/log/:year/:month/:day/:title' do
   markdown_file = File.open(file_name).read
   doc = Maruku.new(markdown_file)
   @doc = doc.to_html
-  @doc_title = params[:title]
-                 .gsub(/([^-])-([^-])/, '\1 \2')
-                 .gsub('--', '-')
-                 .gsub('.md', '')
+  @doc_title = format_title(params[:title])
   haml :log_entry
 end
 
