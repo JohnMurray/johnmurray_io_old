@@ -1,6 +1,3 @@
-require 'uri'
-
-
 $: << ::File.expand_path('../../lib', __FILE__)
 require 'log-helper'
 
@@ -35,12 +32,11 @@ get '/log/pre/*' do
 
   title = params[:splat].join('')
 
-  markdown_file = File.open(File.join(
+  file_name = File.join(
     'blogs',
     'in-the-works',
-    title)).read
-  doc = Maruku.new(markdown_file)
-  @doc = doc.to_html
+    title)
+  @doc = parse_file(file_name)
   @doc_title = format_title(title)
   haml :log_entry
 end
@@ -84,9 +80,7 @@ get '/log/:year/:month/:day/:title' do
     @notes = File.open("#{file_name}.notes").read
   end
 
-  markdown_file = File.open(file_name).read
-  doc = Maruku.new(markdown_file)
-  @doc = doc.to_html
+  @doc = parse_file(file_name)
   @doc_title = format_title(params[:title])
   haml :log_entry
 end

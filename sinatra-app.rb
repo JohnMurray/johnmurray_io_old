@@ -1,6 +1,6 @@
 require 'haml'
 require 'less'
-require 'maruku'
+require 'uri'
 require 'time'
 require 'sinatra'
 require './config/sinatra-config'
