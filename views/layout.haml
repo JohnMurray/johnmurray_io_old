@@ -7,12 +7,8 @@
 
     %link{:rel => 'stylesheet', :href => '/css/reset.css',      :type => 'text/css'}
     %link{:rel => 'stylesheet', :href => '/css/stylesheet.css', :type => 'text/css'}
-    %link{:rel => 'stylesheet', :href => '/css/prettify.css',   :type => 'text/css'}
-    %script{:type => 'text/javascript', :src => 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js'}
-    - if @js_s
-      - @js_s.each do |js|
-        %script{:type => 'text/javascript', :src => "/js/#{js}"}
-    %script{:type => 'text/javascript', :src => '/js/script.js'}
+    %link{:rel => 'stylesheet', :href => '/css/github.css',     :type => 'text/css'}
+    %script{:type => 'text/javascript', :src => '/js/highlight.pack.js'}
 
   %body{:onload => 'javascript:prettyPrint()'}
     =yield
