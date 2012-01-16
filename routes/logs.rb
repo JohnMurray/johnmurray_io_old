@@ -6,7 +6,7 @@ require 'log-helper'
 ## not be visible from the main site. It is solely for the purpose of demo'ing
 ## my log entries to myself to ensure proper formatting.
 ##----
-get '/logs/pre' do
+get '/log/pre' do
   @files = []
   regex = /blogs\/in-the-works\/(?<title>.*\.md)/
   Dir[File.join('blogs', 'in-the-works', '_*.md')].each do |file|
