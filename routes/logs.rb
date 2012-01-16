@@ -28,7 +28,6 @@ end
 ## log entries, this is just a markdown file.
 ##----
 get '/log/pre/*' do
-  @js_s = PrettifierHelper.get_scripts ['ruby', 'scala', 'css', 'yaml']
 
   title = params[:splat].join('')
 
@@ -67,8 +66,6 @@ end
 ## that we are parsing and loading into a page.
 ##----
 get '/log/:year/:month/:day/:title' do
-  @js_s = PrettifierHelper.get_scripts ['ruby', 'scala', 'css', 'yaml']
-
   file_name = File.join(
     'blogs',
     params[:year],

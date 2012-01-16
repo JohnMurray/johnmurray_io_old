@@ -9,6 +9,8 @@
     %link{:rel => 'stylesheet', :href => '/css/stylesheet.css', :type => 'text/css'}
     %link{:rel => 'stylesheet', :href => '/css/github.css',     :type => 'text/css'}
     %script{:type => 'text/javascript', :src => '/js/highlight.pack.js'}
+    %script{:type => 'text/javascript'}
+      hljs.initHighlightingOnLoad();
 
-  %body{:onload => 'javascript:prettyPrint()'}
+  %body{:onload => 'javascript:hljs.initHighlightingOnLoad();'}
     =yield
