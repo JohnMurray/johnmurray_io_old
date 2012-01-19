@@ -38,9 +38,9 @@ If you don't have a Linux server, then a VM or a free micro-instance from
 Amazon will do just fine. For me, I'm justing using the free, default 64-bit
 AMI from Amazon's official AMI list.
 
-> _If you're entirely opposed to using Linux (and prefer Windows) then by all
-> means use it. However, you are on your own other than the brief mention that
-> you can find a great Windows Ruby installer over [here] [4]._
+If you're entirely opposed to using Linux (and prefer Windows) then by all
+means use it. However, you are on your own other than the brief mention that
+you can find a great Windows Ruby installer over [here] [4].
 
 Once you get the Linux server setup then you'll need to install Ruby. I'd
 recommend (for ease) that you use [RVM] [3]. To get started, mosey on
@@ -98,7 +98,19 @@ If everything is setup properly then you should be able to browse to
 
 ![FnordMetric Dashboard][8]
 
-Yay, now that you have fnord running, you just need to pump in some data. Crack
+Yay, now that you have fnord running, you just need to pump in some data. But
+fist, we need to stop and understand what all of this means. Let's take a look
+at the first actual line of code:
+
+<pre><code class="ruby">FnordMetric.namespace :my_first_fnord do</code></pre>
+
+
+
+
+
+
+
+Crack
 open that C# project and add a library reference (via NuGet) to [Sider] [7].
 
 ![Install Sider in Visual Studio via NuGet][9]
@@ -109,29 +121,14 @@ storage engine. It's perfect for our uses because it gets out of our way. Now,
 all you need to do is find that pesky login method (assuming you're following along
 with my example... feel free to stray) and add some code like:
 
-    ## SuperAwesomeLogin.cs
-
-    class TheAuthenticator
+    // Some randome C# code
+    using(var client = new RedisClient("linux.mysite.com:6379"))
     {
-        // ... code and what have you ...
-
-        public SomeLoginModel LogInUser(String username, String pass)
-        {
-            // ... super secret auth stuff ...
-
-            using(var client = new RedisClient("linux.mysite.com:6379"))
-            {
-                String guid = Guid.NewGuid().ToString("N");
-                String fnordId = String.Format("fnordmetric-event-{0}", guid)
-                client.Set(fnordId, "{\"_type\": \"login\"}");
-                client.Expire(fnordId, new TimeSpan(0, 0, 60));
-                client.LPush("fnordmetric-queue", guid);
-            }
-
-            // ... return model and... (yawn)... oh, I was doing something wasn't I?...
-        }
-
-        // ... other monkey business ...
+        String guid = Guid.NewGuid().ToString("N");
+        String fnordId = String.Format("fnordmetric-event-{0}", guid)
+        client.Set(fnordId, "{\"_type\": \"login\"}");
+        client.Expire(fnordId, new TimeSpan(0, 0, 60));
+        client.LPush("fnordmetric-queue", guid);
     }
 
 At this point we are simply pushing a message directly to Redis. FnordMetric will
