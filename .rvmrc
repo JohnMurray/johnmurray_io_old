@@ -25,7 +25,7 @@ if rvm list strings | grep -q "${ruby_string}" ; then
     
     # Bundle while redcing excess noise.
     bundle | grep -v 'Using' | grep -v 'complete' | sed '/^$/d'
-  )& disown ) 2>/dev/null
+  ) 1> /dev/null 2> /dev/null & disown ) 2>/dev/null
 
 else
 
