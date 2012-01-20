@@ -147,7 +147,7 @@ a graph. We're saying that we'd like to create a timeline which includes the
 current time and updates every two seconds (poll server for more data).We've
 also given the widget a nice title to display.
 
-### Now Finishing with C#
+<h3>Now Finishing with C#</h3>
 
 Now that we understand how things work on the Fnord side of things, it's time
 to crack open that C# project and get to work. The first thing that we need to
