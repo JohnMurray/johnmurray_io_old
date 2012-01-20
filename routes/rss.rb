@@ -3,6 +3,8 @@
 ## 
 ##----
 get '/rss' do
+  cache_control :public, :max_age => 0
+
   regex = /blogs\/(?<y>\d+)\/(?<m>\d+)\/(?<d>\d+)\/(?<t>.*\.md)/
   @logs = Dir[File.join("blogs", "**", "[^_]*.md")].sort.reverse
  

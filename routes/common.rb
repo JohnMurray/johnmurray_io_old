@@ -5,7 +5,7 @@
 ## Configure default notes to show at top of page.
 ##----
 before do
-  cache_control :public, :max_age => 86400
+  cache_control :public, :max_age => 7200
   @notes = ""
 end
 
