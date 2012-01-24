@@ -2,7 +2,7 @@
 
 Although it doesn't seem like it would be that hard of a concept (and it's
 really not), there is no real good documentation on how to version your
-WCF Web API. Yes, Microsoft has a long article [here][1] but, I don't think
+WCF web API. Yes, Microsoft has a long article [here][1] but, I don't think
 this makes for a decent web API. Imagine for a moment if I were to version
 my service contracts in order to make my breaking changes. Let's also imagine
 that I have two contracts, `UserInfo` and `CarInfo`. Then we can reasonably
@@ -48,16 +48,54 @@ On your server, create a folder that will contain all of API versions. Perhaps
 `C:\inetpub\wwroot\mysite-apis` and inside that folder create a folder for
 each version such that your directory structure looks like
 
-          \
-    |--v1\
-    |--v2\
-    |--v3\
-    |--...
+          |--wwroot\
+       |--mysite-apis\
+          |--v1\
+          |--v2\
+          |--v3\
+          `--etc.
 
 
 Now, deploy your various API versions to their respective folders on the server.
+This deployment process would be no different than your normal deploy. Now it's
+time to setup your API's in IIS. At this point, I'm assuming you know the proper
+steps necessary to do a normal deployment of your API. So, either create a new
+project or use an existing project that has the following properties:
+
+* It has a binding of api.mysite.com (or whatever you're using)
+* It points to the folder containing your "default" version (if no version
+is specified).
+
+Test your setup and make sure everything works before continuing. Once you have
+that setup, now you need to create a sub-application for each version of your
+API (including the one you specified as default) with an alias of `vN` where 
+`N` is the version number. The alias acts as a path relative to the root
+application. Meaning that you could get to your different sub-applications by
+means of:
+
+    <root-application-binding>/vN
+
+In our case `<root-application-binding>` is `http://api.mysite.com`. Test your
+setup out by making API calls to the various versions. If you run into any
+issues, read the "Potential Roadblocks" section below.
+
+
+# Potential Roadblocks
+
+## Configuration Inheritance
+I had an issue with my versions inheriting the configuration from the root
+project which was causing all kinds of issues for me. A quick look around
+however, and I found this nice little XML container that you can put your
+configuration inside of:
+
+    <location path="." allowOverride="false">
+
+Anything that you don't want inherited from your root application (and I would
+imagine that to be most of it), you can put within these tags. You can check out
+the [documentation page][3] for more details.
 
 
 
   [1]: http://msdn.microsoft.com/en-us/library/ms731060.aspx
   [2]: http://code.google.com/apis/maps/documentation/javascript/basics.html#Versioning
+  [3]: http://msdn.microsoft.com/en-us/library/b6x6shw7.aspx

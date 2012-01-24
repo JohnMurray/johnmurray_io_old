@@ -1,0 +1,3 @@
+I am assuming that you are working with a web API. Meaning that it is, at a
+minimum, accessed over HTTP. Ideally you'd be working with an API that is meant
+for public consumption but, I'd imagine this would be useful either way.
