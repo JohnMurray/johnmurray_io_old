@@ -3,10 +3,11 @@
 Although it doesn't seem like it would be that hard of a concept (and it's
 really not), there is no real good documentation on how to version your
 WCF web API. Yes, Microsoft has a long article [here][1] but, I don't think
-this makes for a decent web API. Imagine for a moment if I were to version
-my service contracts in order to make my breaking changes. Let's also imagine
-that I have two contracts, `UserInfo` and `CarInfo`. Then we can reasonably
-say that I might have URLs that look like:
+this makes for a decent web API and I'll give and example to explain why. 
+Imagine for a moment if I were to version my service contracts in order 
+to make my breaking changes. Let's also imagine that I have two contracts, 
+`UserInfo` and `CarInfo`. Then we can reasonably say that I might have URLs 
+that look like:
 
           http://api.mysite.com/UserInfo/<MethodName>
     http://api.mysite.com/CarInfo/<MethodName>
