@@ -9,6 +9,7 @@ gem 'rake', '0.9.2'
 gem 'sinatra', '1.2.6'
 gem 'thin', '1.2.11'
 gem 'activerecord', '3.1.0'
+gem 'newrelic_rpm'
 
 
 group :development do
