@@ -6,6 +6,6 @@ Sorry, no spoilers. If you're curious who came out ahead you'll have to read the
 <br />
 
 # Plugins? They're harmless... right?
-So, now that I sure you have read (in length) the paper about Java vs. PHP, you should be ready to talk about plugins. And when I mean plugins, I am talking about web application plugins and what they bring to the security game. The whole theory here is that plugins for web applications are analogous to drivers for operating systems in how they impact security (ie. plugins expose weaknesses in the containing application).
+So, now that I'm sure you have read (in length) the paper about Java vs. PHP, you should be ready to talk about plugins. And when I mean plugins, I am talking about web application plugins and what they bring to the security game. The whole theory here is that plugins for web applications are analogous to drivers for operating systems in how they impact security (ie. plugins expose weaknesses in the containing application).
 
 Once again, you'll have to read the paper if you want to know the results. You can find the paper here: [MetriSec Final Submission](/repo/research/metrisec-final.pdf)

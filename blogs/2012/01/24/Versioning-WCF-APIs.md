@@ -89,7 +89,7 @@ project which was causing all kinds of issues for me. A quick look around
 however, and I found this nice little XML container that you can put your
 configuration inside of:
 
-    <location path="." allowOverride="false">
+    <location path="." inheritInChildApplications="false">
 
 Anything that you don't want inherited from your root application (and I would
 imagine that to be most of it), you can put within these tags. You can check out
