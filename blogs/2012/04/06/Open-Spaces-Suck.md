@@ -20,7 +20,7 @@ by product of a room full of people... did you get it yet?
 
 NOISE!
 
-Lots and lots of noise! Whether it's a youtube video are biz-devs want to share,
+Lots and lots of noise! Whether it's a YouTube video are biz-devs want to share,
 our lawyer in training discussing patents and copyright with our CEO, or our scrum
 leader giving feedback to our designer over the phone, it doesn't matter. It
 all comes down to a lot of noise. Yes, a lot of the noise is generated from 
