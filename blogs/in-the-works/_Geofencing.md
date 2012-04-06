@@ -1,7 +1,7 @@
-# Geofencing with MongoDB
+**tl;dr**
 
-Just give an overview of how to implement geofencing for MongoDB using the
-same algorithms (with the technical details left out) that I created for
-MyMavia. 
+#Abridged Summary (for those who don't read)
+You can represent geofences in MongoDB as a series of points. To start you
+place your polygon on a grid and then use an area-estimation problem to see
+which grid-blocks lie within the 
 
-I'll have to get permission on this one. 
