@@ -20,7 +20,7 @@ by product of a room full of people... did you get it yet?
 
 NOISE!
 
-Lots and lots of noise! Whether it's a YouTube video are biz-devs want to share,
+Lots and lots of noise! Whether it's a YouTube video our biz-devs want to share,
 our lawyer in training discussing patents and copyright with our CEO, or our scrum
 leader giving feedback to our designer over the phone, it doesn't matter. It
 all comes down to a lot of noise. Yes, a lot of the noise is generated from 
@@ -45,7 +45,7 @@ at first, but the first windy day is going to give you a lot of problems. Each
 time the wind gusts it may knockdown part, or all, of your card-house. You can
 quickly see that you are no longer in control of your productivity. When you
 were inside, let's say you knew you could get 2.7 card-houses built per day on 
-average. Now that you're outside, your
+average. Now that you're outside, you're
 somewhat at the mercy of the wind. On a bad day, you may not build any 
 card-houses and on the best days, you'll do as good as you did inside 
 (but you'll never do any better).
