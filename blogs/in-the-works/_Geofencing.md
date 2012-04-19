@@ -8,7 +8,6 @@ Mongo's built-in query features to determine if a coordinate lies within (or
 outside of) the polygon. Viola, geofencing with Mongo. If I've peaked your
 interest (and you have the time), please read the full version.
 
-
 # tl;dr Version
 The rest of the document will go as follows:
 
