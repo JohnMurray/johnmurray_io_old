@@ -3,6 +3,7 @@ require 'maruku'
 ## format the title from the file name into the displayable title
 def format_title(title)
   title.gsub(/([^-])-([^-])/, '\1 \2')
+       .gsub(/([^-])-([^-])/, '\1 \2')
        .gsub('--', '-')
        .gsub('.md', '')
 end
