@@ -11,13 +11,6 @@ require './lib/prettifier-helper'
 ##----
 ## Load all of the Sinatra routes
 ##----
-[
-  'common', 
-  'home', 
-  'contact', 
-  'logs', 
-  'rss',
-  'random'
-].each do |r|
+%w(common home contact logs rss random).each do |r|
   require "./routes/#{r}"
 end
