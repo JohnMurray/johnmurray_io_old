@@ -27,12 +27,3 @@ set :show_exceptions, Proc.new {settings.environment == :development }
 ##   Settings that have to do with logging in general
 ##----
 set :logdir, File.join(settings.root, 'log')
-if settings.environment == :production then
-  $stderr.reopen File.open(File.join(settings.logdir, 'sinatra.log'), 'a')
-  $stdout.reopen File.open(File.join(settings.logdir, 'sinatra.log'), 'a')
-end
-
-
-
-
-
