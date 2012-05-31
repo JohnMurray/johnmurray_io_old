@@ -42,7 +42,12 @@ Pry)
 That's quite a bit of work if I were to do that each time I started a new
 interactive Pry session. And to be honest, I just wouldn't. I would do the bare
 minimum required to test something. With the console, I can have some other
-niceties because I only have to write them one. So nice!
+niceties because I only have to write them once. So nice!
+
+This has now become a mandatory step when _getting started_ on any new Ruby
+project. I add some basics that I put into all of my console files and then
+I evolve the console as the project moves forward. I can't imagine working
+any other way (well... I can, I just don't prefer it).
 
 
   [1]: http://pry.github.com/
