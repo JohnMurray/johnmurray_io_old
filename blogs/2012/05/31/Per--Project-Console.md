@@ -4,8 +4,8 @@ useful and the Rails Console is a great example of utilizing that interactive
 environment effectively. 
 
 However, if you're like me, then you don't work in Rails. The majority of my
-work is in custom Ruby programs, [EM][2]-driven programs and [Sinatra] APIs. You
-don't get anything like Rails Console for free when you're building a custom
+work is in custom Ruby programs, [EM][2]-driven programs and [Sinatra][4] APIs.
+You don't get anything like Rails Console for free when you're building a custom
 Ruby program. So, when you start up an interactive environment, you may find
 yourself starting each session like so:
 
