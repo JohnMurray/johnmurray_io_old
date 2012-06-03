@@ -53,8 +53,11 @@
     <div class="content">
       <p><b>Software Developer</b>, Mavizon Technologies, New Albany, IN (2011-Present)</p>
       <ul>
-        <li>Developed various platforms including the Advertising Platform and the Real Time Event Platform</li>
-        <li>Developed backend and internal systems and tools as well as maintained public APIs</li>
+        <li>
+          Primary responsibilities included development of many backend
+          systems as well as maintaining and developing the public APIs
+        </li>
+        <li>Developed internal systems and tools</li>
         <li>Teacher of all things Git</li>
       </ul>
 
