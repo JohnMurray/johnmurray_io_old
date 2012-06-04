@@ -122,7 +122,7 @@ object right before serializing to JSON. Finally, we have working serialization!
 
 #### Step 3 - Send JSON via HTTP POST
 
-In terms of length and complexity, send a request isn't too cumbersome of a 
+In terms of length and complexity, sending a request isn't too cumbersome of a 
 process. Assuming that we have already serialized the JSON into a Stream
 object, sending our request looks like the following:
 
