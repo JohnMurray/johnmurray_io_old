@@ -33,7 +33,7 @@ Based on what I found on the internet, this should suffice:
 <br />
 
 ___Anit-Pattern #1___ - Organize your standard library in a way that makes no
-logical sense the user
+logical sense
 
 I had to include the _System.XML_ DLL into my project
 for this to work for searializing to JSON?? (VS reported the error on line 6
