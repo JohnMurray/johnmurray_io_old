@@ -33,7 +33,7 @@ Based on what I found on the internet, this should suffice:
 <br />
 
 ___Anit-Pattern #1___ - Organize your standard library in a way that makes no
-logical sense the user
+logical sense
 
 I had to include the _System.XML_ DLL into my project
 for this to work for searializing to JSON?? (VS reported the error on line 6
@@ -122,7 +122,7 @@ object right before serializing to JSON. Finally, we have working serialization!
 
 #### Step 3 - Send JSON via HTTP POST
 
-In terms of length and complexity, send a request isn't too cumbersome of a 
+In terms of length and complexity, sending a request isn't too cumbersome of a 
 process. Assuming that we have already serialized the JSON into a Stream
 object, sending our request looks like the following:
 
