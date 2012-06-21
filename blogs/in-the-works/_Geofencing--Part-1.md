@@ -11,7 +11,9 @@ follows:
 
 Let's get started shall we.
 
-
+<br />
+---
+<br />
 
 # What is \[a] Geofence/Geofencing?
 ## General Description
@@ -32,6 +34,11 @@ still a little fuzzy, I'll draw you a pretty picture:
 talk about how spatially-aware apps are the future what with the rise
 of mobile computing and possibly advertising and all that jazz
 
+Let's face it, geofences are sexy. Apps that use user's geospatial data
+is the next step in user-engagement. With geofences, we can interact with
+our users when they're on the move; enjoying life and not spending countless
+hours in front of a computer. 
+
 
 ## Computing Methods
 Talk about various way of implementing a goefence
@@ -44,11 +51,14 @@ for completeness.
 
 
 ## Available Services
-just to finish things off, talk about available geofencing services
-http://www.maponics.com/trial-predefined-geofences-today/?gclid=CMSX4dj027ACFYFo4Aodsw253Q
-http://www.urbanmapping.com/content/data-and-services
-http://www.loc-aid.com/
-http://www.locationlabs.com/products/geofencing/
+And finally, to wrap things up, here is a list of sites that provide
+geofence services:
+
+- [Geoloqi] (https://geoloqi.com/)
+- [maponics] (http://www.maponics.com/trial-predefined-geofences-today/)
+- [Urban Mappings] (http://www.urbanmapping.com/content/data-and-services)
+- [Loc Aid] (http://www.loc-aid.com/)
+- [locationlabs] (http://www.locationlabs.com/products/geofencing/)
 
 
 
