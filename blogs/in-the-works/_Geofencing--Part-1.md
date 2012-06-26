@@ -37,7 +37,17 @@ of mobile computing and possibly advertising and all that jazz
 Let's face it, geofences are sexy. Apps that use user's geospatial data
 is the next step in user-engagement. With geofences, we can interact with
 our users when they're on the move; enjoying life and not spending countless
-hours in front of a computer. 
+hours in front of a computer. Apple realizes this to the point that they are
+including geo-spatial reminders in iOS (probably using geofences of some
+sort). 
+
+And the possibilities are endless! Sure, everyone's going for the obvious
+answers right now, such as: alerts, reminders, etc; but there are so many
+oppurtunities that haven't been explored. What if Facebook used geofences
+in their next mobile app to determine how many people attended an event?
+They could use the GPS position of everyone running the FB app on their
+phone to determine who actually showed up. And guess what, they could easily
+do that with geofences!
 
 
 ## Computing Methods
@@ -60,10 +70,19 @@ geofence services:
 - [Loc Aid] (http://www.loc-aid.com/)
 - [locationlabs] (http://www.locationlabs.com/products/geofencing/)
 
+I'm sure there are more that I am forgetting, but you get the point. There
+are quite a few services out there and geofencing is going to be too
+important to ignore.
+
+## Part 2
+Well, that's all I have for you right now. If you think you're ready head
+on over to [Part 2][2] for a whirlwind introduction on building your own
+geofence server with Ruby and Mongo. 
+
 
 
 
   [1]: #
-  [2]: /logs/pre/_Geofencing--Part-2.md
-  [3]: /logs/pre/_Geofencing--Part-3.md
+  [2]: /log/pre/_Geofencing--Part-2.md
+  [3]: /log/pre/_Geofencing--Part-3.md
   [4]: /blog-files/geofence/fence_on_map.png
