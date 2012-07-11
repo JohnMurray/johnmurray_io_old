@@ -38,6 +38,15 @@ still a little fuzzy, I'll draw you a pretty picture:
 
 ![pretty geofence picture][4]
 
+Some simple properties that a geofence might include:
+
+- If the user inside or outside of the fence
+- If the user traveled into (from outside of) the fence (and vice versa)
+- How long the user been inside or outside of the fence
+
+Conceptually, a geofence is by no means a profound idea. So, why do we care?
+
+
 
 ## So Why Geofences?
 Let's face it, geofences are sexy. Apps that use user's geo-spatial data
