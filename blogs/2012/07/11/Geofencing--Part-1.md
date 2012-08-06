@@ -106,11 +106,11 @@ check out some of these articles as well:
 And finally, to wrap things up, here is a list of sites that provide
 geofence services:
 
-- [Geoloqi] (https://geoloqi.com/)
-- [maponics] (http://www.maponics.com/trial-predefined-geofences-today/)
-- [Urban Mappings] (http://www.urbanmapping.com/content/data-and-services)
-- [Loc Aid] (http://www.loc-aid.com/)
-- [locationlabs] (http://www.locationlabs.com/products/geofencing/)
+- [Geoloqi](https://geoloqi.com/)
+- [maponics](http://www.maponics.com/trial-predefined-geofences-today/)
+- [Urban Mappings](http://www.urbanmapping.com/content/data-and-services)
+- [Loc Aid](http://www.loc-aid.com/)
+- [locationlabs](http://www.locationlabs.com/products/geofencing/)
 
 I'm sure there are more that I am forgetting, but you get the point. There
 are quite a few services out there and geofencing is going to be too

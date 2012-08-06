@@ -3,7 +3,7 @@ source :rubygems
 gem 'haml', '3.1.2'
 gem 'heroku', '2.8.0'
 gem 'less', '2.0.6'
-gem 'maruku', '0.6.0'
+gem 'rdiscount'
 gem 'rack', '1.3.2'
 gem 'rake'
 gem 'sinatra', '1.2.6'
