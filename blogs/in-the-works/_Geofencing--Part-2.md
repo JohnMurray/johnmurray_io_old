@@ -126,8 +126,36 @@ that you are outside of the fence) or 1 to 4 points (meaning that you are
 inside of the fence).
 
 ### Turning Polygons into Grids
+So far, things have been pretty easy (although possibly not easy to follow
+along the first time through) conceptually. Now you might have to get some
+pin a paper out to draw this next piece to fully understand how we are
+going to do this. 
 
+Our objective is to turn a random, regular polygon into a set of grid-blocks
+which estimate its shape. We're going to be using an algorithm similar to
+how you get the [area of a polygon][5]. I'll give you the steps, then I'll
+lay it out visually for you.
 
+0. Create an array to contain your estimated polygon (array of grid-blocks),
+we'll call it __E__
+0. Generate a grid that contians your polygon
+0. For each latitude (y-value on an x-y plane), draw a horizontal line
+0. For each area in-between the horizontal lines:
+    1. Get all grid-blocks that are between the lines, we'll call this list __G__
+    1. Get all lines that intersect the horizontal-section, and for each one, called __l__:
+        0. Get all grid-blocks in __G__ to the left of __l__, called __G<sub>2</sub>__
+        0. For each grid-block in __G<sub>2</sub>__, called __g__:
+            0. If __g__ is in __E__, remove __g__ from __E__
+            0. If __g__ is not in __E__, add __g__ to __E__
+0. Store grid-block center-points from __E__ in Mongo. Done!
+
+<br />
+If you didn't quite follow that (or can't visualize that well), then no
+worries. Here is a visual:
+
+![detailed estimation visualization 1][6]
+![detailed estimation visualization 2][7]
+![detailed estimation visualization 3][8]
 
 
 
@@ -141,3 +169,7 @@ inside of the fence).
   [2]: /blog-files/geofence/part-2/mongo-spatial-index-and-query.png
   [3]: /blog-files/geofence/part-2/polygon-estimation-conceptual.png
   [4]: /blog-files/geofence/part-2/polygon-query.png
+  [5]: http://alienryderflex.com/polygon_area/
+  [6]: /blog-files/geofence/part-2/polygon-estimation-detailed-1.png
+  [7]: /blog-files/geofence/part-2/polygon-estimation-detailed-2.png
+  [8]: /blog-files/geofence/part-2/polygon-estimation-detailed-3.png
