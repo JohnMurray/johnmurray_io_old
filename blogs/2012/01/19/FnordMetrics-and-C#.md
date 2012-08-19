@@ -50,44 +50,19 @@ over to their (entirely professional) site and follow the instructions.
 Once that is done, we need to install FnordMetric. This is my favorite part
 just because it is so easy. Open up a terminal and run:
 
-    gem install fnordmetric
+<script src="https://gist.github.com/3388516.js?file=gem-install.sh">
+</script>
 
 That's it! Painless I know. :-)
 
-## Your first Fnord
-
-Now that we have everything setup, it's time to get down to business. 
-
-### Starting First with Ruby
-Open up your favorite editor and copy the following into `fnord.rb`
-
-    ## fnord.rb
-    require 'fnordmetric'
-    
-    FnordMetric.namespace :my_first_fnord do    
-    
-        # numeric gauge, shown on a per-hour total
-        gauge :logins_per_hour,
-            :tick  => 1.hour.to_i,
-            :title => 'Logins per Hour'
-
-        event(:login) { incr(:logins_per_hour) }
-    
-        widget 'Web Logins', {
-          :title            => 'Web App Logins Per Hour',
-          :type             => :timeline,
-          :gauges           => :logins_per_hour,
-          :include_current  => true,
-          :autoupdate       => 2 #update graph every 2 seconds
-        }
-    end
-    
-    FnordMetric.standalone
+<script src="https://gist.github.com/3388516.js?file=first-fnord.rb">
+</script>
 
 That's all it takes to get a sample up and running. If you want proof, just run
 the following in a terminal:
 
-    ruby fnord.rb run
+<script src="https://gist.github.com/3388516.js?file=run-fnord.sh">
+</script>
 
 If everything is setup properly then you should be able to browse to
 [http://localhost:4242/] [6] and see a dashboard similar to the following:
@@ -98,7 +73,8 @@ Yay, now that you have fnord running, you just need to pump in some data. But
 fist, we need to stop and understand what all of this means. Let's take a look
 at the first actual line of code:
 
-<pre><code class="ruby">FnordMetric.namespace :my_first_fnord do</code></pre>
+<script src="https://gist.github.com/3388516.js?file=fnord-namespace.rb">
+</script>
 
 This simply let's us define a namespace within the Fnord application. What 
 exactly is a namespace? Well, in the context of my work, it could be our web
@@ -108,10 +84,8 @@ Fnord instance.
 
 The next piece of important code is the gauge:
 
-<pre><code class="ruby">gauge :logins_per_hour,
-    :tick  => 1.hour.to_i,
-    :title => 'Logins per Hour'
-</code></pre>
+<script src="https://gist.github.com/3388516.js?file=fnord-guage.rb">
+</script>
 
 This specifies the *bucket*, per say. This is a *bucket* (or gauge) where you
 will store events. In this case I have a *bucket* (:logins_per_hour) that is
@@ -121,27 +95,24 @@ title is only used when looking at the keys in your graph.
 
 Moving on, the event:
 
-<pre><code class="ruby">event(:login) { incr(:logins_per_hour) }
-</code></pre>
+<script src="https://gist.github.com/3388516.js?file=fnord-event.rb">
+</script>
 
 This registers the event that Fnord will listen to and what to do when that
 event is received. In this case, we'd like to increment the gauge :logins_per_hour
 when we receive a :login event. 
 
 An event looks like this (in JSON):
-<pre><code class="javascript">{ "_type": "login" }</code></pre>
+<script src="https://gist.github.com/3388516.js?file=JSON.js">
+</script>
 This is sent to Fnord in a variety of ways (we'll look at one way in a minute).
 
 Lastly, there is the widget. The widget determines what we're actually going
 to show in the dashboard.
-<pre><code class="ruby">
-widget 'Web Logins', {
-       :title            => 'Web App Logins Per Hour',
-       :type             => :timeline,
-       :gauges           => :logins_per_hour,
-       :include_current  => true,
-       :autoupdate       => 2 #update graph every 2 seconds
-  }</code></pre>
+
+<script src="https://gist.github.com/3388516.js?file=fnord-widget.rb">
+</script>
+
 In this case, we'd like to use the *bucket* (gauge) we've created as input to
 a graph. We're saying that we'd like to create a timeline which includes the
 current time and updates every two seconds (poll server for more data).We've
@@ -166,14 +137,8 @@ So, since the example I have given deals with tracking logins, you would
 normally add the code below somewhere in your applications login method. Of
 course you can follow along however you like (login or no login).
 
-    using(var client = new RedisClient("linux.mysite.com:6379"))
-    {
-        String guid = Guid.NewGuid().ToString("N");
-        String fnordId = String.Format("fnordmetric-event-{0}", guid)
-        client.Set(fnordId, "{\"_type\": \"login\"}");
-        client.Expire(fnordId, new TimeSpan(0, 0, 60));
-        client.LPush("fnordmetric-queue", guid);
-    }
+<script src="https://gist.github.com/3388516.js?file=redis-push.cs">
+</script>
 
 At this point we are simply pushing a message directly to Redis. FnordMetric will
 notice the event and update the results in the dashboard. Note that I have
@@ -197,48 +162,16 @@ Redis keys. This is discussed in the next section if you are interested.
  out, is populated with some smart defaults. Let's define a custom
  configuration as
 
-    ## fnord.rb
-
-    # fnord namespace definition (as shown previously)
-
-    FnordMetric.server_configuration = {
-        # point to external redis on non-standard port
-        redis_url:          'redis://10.1.0.38:6380',
-
-        # prefix on events pushed to redis
-        redis_prefix:       'mavia-metrics',
-
-        # port on which to accept event-pushes (we're not using this)
-        inbound_stream:     ['0.0.0.0', '1339'],
-
-        # port to run web interface
-        web_interface:      ['0.0.0.0', '80'],
-
-        # worker "process" to watch redis (we want this)
-        start_worker:       true,
-
-        # make the program chatty so we know how it's feeling
-        print_stats:        3,
-
-        # events not processed after 2 minutes are dropped
-        event_queue_ttl:    120,
-
-        # event data is kept for one month
-        event_data_ttl:     3600*24*30,
-
-        # session data is kept for one month
-        :session_data_ttl:  3600*24*30
-          
-    }
-
-    FnordMetric.standalone
+<script src="https://gist.github.com/3388516.js?file=fnord-configuration.rb">
+</script>
 
 Take a minute to examine the configuration. Everything should be pretty
 self-explanatory with the possible exception of the `redis_prefix`. This
 is used to determine the keys you use when inserting data into redis. For
 example, with the newly defined prefix, our redis ID might look like
 
-<pre><code class="cs">String.Format("mavia-metrics-{0}", guid);</code></pre>
+<script src="https://gist.github.com/3388613.js?file=redis-queue-name.cs">
+</script>
 
 The one other item that might be a little confusing is the `inbound_stream`
 configuration option. This specifies on what port the API will run. The API

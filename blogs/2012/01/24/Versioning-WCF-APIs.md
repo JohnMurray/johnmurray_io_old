@@ -9,15 +9,12 @@ to make my breaking changes. Let's also imagine that I have two contracts,
 `UserInfo` and `CarInfo`. Then we can reasonably say that I might have URLs 
 that look like:
 
-          http://api.mysite.com/UserInfo/<MethodName>
-    http://api.mysite.com/CarInfo/<MethodName>
+<script src="https://gist.github.com/3397034.js?file=URL-1.txt"></script>
 
 Now, what happens when I need to make some breaking changes to say **just** the
 `UserInfo` service contract. Now our URLs might look like:
 
-          http://api.mysite.com/UserInfo/<MethodName>
-    http://api.mysite.com/UserInfoV2/<MethodName>
-    http://api.mysite.com/CarInfo/<MethodName>
+<script src="https://gist.github.com/3397034.js?file=URL-2.txt"></script>
 
 Now if the user wants to use the latest and greatest then, they need to be
 using UserInfoV2 and CarInfo. This is no good. What if you had 20 endpoints
@@ -37,9 +34,7 @@ by some means, allow a way for their user to pass in an explicit version number
 or, if no version number is given, serve them the latest API. I'm a big fan of
 putting the version into the request URL such that our requests might look like:
 
-          http://api.mysite.com/UserInfo/<MethodName>       #version 2
-    http://api.mysite.com/v1/UserInfo/<MethodName>  #version 1
-    http://api.mysite.com/v2/UserInfo/<MethodName>  #version 2
+<script src="https://gist.github.com/3397034.js?file=URL-3.txt"></script>
 
 This offers a clean separation of versions. It makes it very clear to the end
 user what version they are using and there is little room for confusion. So,
@@ -49,13 +44,7 @@ On your server, create a folder that will contain all of API versions. Perhaps
 `C:\inetpub\wwroot\mysite-apis` and inside that folder create a folder for
 each version such that your directory structure looks like
 
-          |--wwroot\
-       |--mysite-apis\
-          |--v1\
-          |--v2\
-          |--v3\
-          `--etc.
-
+<script src="https://gist.github.com/3397034.js?file=web-server-directory-structure.txt"></script>
 
 Now, deploy your various API versions to their respective folders on the server.
 This deployment process would be no different than your normal deploy. Now it's
@@ -74,7 +63,7 @@ API (including the one you specified as default) with an alias of `vN` where
 application. Meaning that you could get to your different sub-applications by
 means of:
 
-    <root-application-binding>/vN
+<script src="https://gist.github.com/3397034.js?file=sub-application-IIS-versioning.txt"></script>
 
 In our case `<root-application-binding>` is `http://api.mysite.com`. Test your
 setup out by making API calls to the various versions. If you run into any
@@ -89,7 +78,7 @@ project which was causing all kinds of issues for me. A quick look around
 however, and I found this nice little XML container that you can put your
 configuration inside of:
 
-    <location path="." inheritInChildApplications="false">
+<script src="https://gist.github.com/3397034.js?file=config-inheritence.xml"></script>
 
 Anything that you don't want inherited from your root application (and I would
 imagine that to be most of it), you can put within these tags. You can check out
