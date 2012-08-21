@@ -158,6 +158,112 @@ worries. Here is a visual:
 ![detailed estimation visualization 3][8]
 
 
+# Coding Time
+
+Okay, now that we have gone through evertyhing at the conceptual level, it's
+time for some real code. If you had any trouble understanding the previous
+sections, it will be worth your time to go back with pen and paper and draw
+out all of the steps until it makes sense.
+
+## Creating Our Grid
+
+Assuming that we're going to get out polygon in the form of some Lat-Lon
+points, then we can generate our grid like the following:
+
+<script src="https://gist.github.com/3397316.js?file=grid-generation.rb"></script>
+
+
+## Getting our Horizontal Sections
+
+<script src="https://gist.github.com/3397316.js?file=get-horizontals.rb"></script>
+
+Once we have our horizontal sections, we can then filter our grid-items to
+only process those that are included in the sub-section. This would look
+something like:
+
+<script src="https://gist.github.com/3397316.js?file=get-sub-grids.rb"></script>
+
+
+## Intersecting Lines
+
+Alright! Now we just need to get the intersecting lines though the sub-grid
+and we'll be one step away from adding grid-blocks into our estimated polygon
+array. (If you don't know what I'm talking about, please review the conceptual
+aproach, and visuals, above.)
+
+<script src="https://gist.github.com/3397316.js?file=get-intersecting-lines.rb"></script>
+
+
+## Is a Point to the Left or Right?
+
+Now that we can get out intersecting lines, we need to determine, for each
+point within the sub-grid, if that point is to the left of the intersecting
+line or to the right of the line. If it is to the left of the line, then
+two things can happen. If that point is already included in the 
+estimated-polygon array, then it will be removed and if it was not in the
+array, then it will be added. And finally, the code:
+
+<script src="https://gist.github.com/3397316.js?file=det.rb"></script>
+
+
+
+## Estimation Complete!
+
+While it may not seem like you are done, trust me when I say you have
+completed all of the necessary steps to estimate a geofence. The only
+thing missing is to put all of the steps together (stay tuned). Now
+that we have our estimation, we simply need to store it in Mongo.
+
+
+
+## Mongo-Land
+
+Okay, now that we have our estimated polygon/fence, it's time to store
+those points in Mongo-land. First, we need to understand what our
+resulting estimation looks like:
+
+<script src="https://gist.github.com/3397316.js?file=estimated-fence-format.rb"></script>
+
+The __:lon__ and __:lat__ would obviously be replaced with real values.
+We're going to tranform this array of points to store in Mongo in the
+following format:
+
+<script src="https://gist.github.com/3397316.js?file=mongo-document.js"></script>
+
+We have to use this particular format because it is required for us to
+apply our geo-spatial index (which I'll show in a moment). If you want more
+info on Mongo's geo-spatial indexes, check out [their docs][9].
+
+To store our estimated polygon/fence into mongo, we're going to use the
+following code:
+
+<script src="https://gist.github.com/3397316.js?file=store-and-index.rb"></script>
+
+
+
+## Querying Mongo
+
+Now that we have everything stored in Mongo, it's time to utilize the DB's
+geo-spatial indexing features to bring out geofences to life! And it's so
+simple; the code is only:
+
+<script src="https://gist.github.com/3397316.js?file=query-mongo.rb"></script>
+
+Of course, I'm only returning if the count is greater than zero. You could
+do whatever you please with the cursor. I think the cursor is nil if nothing
+is found in Mongo, so you could just return the result of the find operation.
+
+
+
+
+# Suprise!
+
+It's time to find out what's at the end of the rainbow. I've been promising
+_something_ this whole time. 
+
+__TODO__ finish the post (p.s. - the surprise is the code, in case I forget)
+
+
 
 
 
@@ -173,3 +279,4 @@ worries. Here is a visual:
   [6]: /blog-files/geofence/part-2/polygon-estimation-detailed-1.png
   [7]: /blog-files/geofence/part-2/polygon-estimation-detailed-2.png
   [8]: /blog-files/geofence/part-2/polygon-estimation-detailed-3.png
+  [9]: http://www.mongodb.org/display/DOCS/Geospatial+Indexing/
