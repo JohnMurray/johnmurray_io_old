@@ -1,10 +1,3 @@
-require 'active_record'
-require 'yaml'
-require 'logger'
-require 'uri'
-
-
-
 ##----
 ## SINATRA SETTINGS
 ##   Settings that are more specific to Sinatra than anythign else
