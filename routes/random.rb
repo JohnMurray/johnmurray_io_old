@@ -9,7 +9,7 @@ get '/*/:name' do
   end
 
   markdown_file = File.open(file_name).read
-  doc = Maruku.new(markdown_file)
+  doc = RDiscount.new(markdown_file)
   @doc = doc.to_html
   @doc_title = params[:name]
                 .gsub(/([^-])-([^-])/, '\1 \2')
