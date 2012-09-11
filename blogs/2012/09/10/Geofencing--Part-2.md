@@ -1,59 +1,6 @@
 # Building Your Own Geofence Server
 
 
-__Blog Post Flow__
-
-- Introduction
-  - Blog-post greetings.
-  - Overview of how the post is organized (the approach/steps we'll take)
-  - Mention cookie at the end of the post, althoug not directly saying
-    what it is (the example geo-fence server)
-  - mention that our geofence-server is conceptual and therefore does
-    not deal with real coordinate values. (aka - it does not deal with
-    negative values; only positive integers)
-
-- Conceptual Approach
-  - Advantages of Mongo DB
-    - We know that we want to re-use existing software to make our
-      lives easier. So, explain some of the geo-spatial features
-      that are available in Mongo. Mention that we want ot figure
-      out how to utilize these features even though geofencing is
-      not directly supported.
-  - Geofences as Grids
-    - Talk about how if we represent polygons as grids, then we can
-      take advantage of the features that MongoDB offers.
-    - Talk about how we are going to query for the geofences (stored
-      as points)
-  - Turning Polygons into Grids
-    - Sticking with the concept of "working our way backwards," we'll
-      explain how we are going to transform our polygon (for our
-      geofence) into a grid that we can then use with Mongo. 
-    - For this, make sure to link to the "estimate-area" function in
-      C.
-
-- Building our Grid
-  - Go over the grid-creation function
-  - Show some code with GitHub
-
-- Estimating the Polygon
-  - Go over the estimation function
-  - Show some code with GitHub
-
-- Storing the estimation in Mongo DB
-  - Explain the storage-format
-  - Explain the index
-  - Go over the transformation function (the function that transforms
-    our current data-structure into the Mongo DB structure)
-  - Show some code with GitHub
-
-- Query the DB (Mongo)
-  - Show how to query the DB within Mongo Shell
-  - Show some code with GitHub to explain how this is
-    translated to the Mongo DB (Ruby) Driver
-
-
-
-
 # Hello!
 
 Well, it looks like I might have peaked your interest enough from the
@@ -259,10 +206,8 @@ is found in Mongo, so you could just return the result of the find operation.
 # Suprise!
 
 It's time to find out what's at the end of the rainbow. I've been promising
-_something_ this whole time. 
-
-__TODO__ finish the post (p.s. - the surprise is the code, in case I forget)
-
+_something_ this whole time. Well, you're just goin going to have to go to
+the [third post][10] in the series to find out!  ;-)
 
 
 
@@ -280,3 +225,4 @@ __TODO__ finish the post (p.s. - the surprise is the code, in case I forget)
   [7]: /blog-files/geofence/part-2/polygon-estimation-detailed-2.png
   [8]: /blog-files/geofence/part-2/polygon-estimation-detailed-3.png
   [9]: http://www.mongodb.org/display/DOCS/Geospatial+Indexing/
+  [10]: /log/2012/07/11/Geofencing--Part-3.md
