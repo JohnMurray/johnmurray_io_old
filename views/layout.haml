@@ -8,11 +8,10 @@
     %link{:rel => 'stylesheet', :href => '/css/reset.css',      :type => 'text/css'}
     %link{:rel => 'stylesheet', :href => '/css/stylesheet.css', :type => 'text/css'}
     %link{:rel => 'stylesheet', :href => '/css/github.css',     :type => 'text/css'}
-    %script{:type => 'text/javascript', :src => '/js/highlight.pack.js'}
-    %script{:type => 'text/javascript'}
-      hljs.initHighlightingOnLoad();
 
-  %body{:onload => 'javascript:hljs.initHighlightingOnLoad();'}
+  %body
+    #job{:style => 'display:block;height: 30px;background: #2C2C2C;width:100%;position: absolute;left: 0;top: 0;color: #ddd;text-align: center;font-size: 16px;'}
+      Looking to hire a full time developer? Contact me@johnmurray.io
     =yield
 
     %script{:type => 'text/javascript'}
