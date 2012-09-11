@@ -51,13 +51,13 @@
       Experience
     </div>
     <div class="content">
-      <p><b>Software Developer</b>, Mavizon Technologies, New Albany, IN (2011-Present)</p>
+      <p><b>Software Developer</b>, Mavizon, Louisville, KY(2011-2012)</p>
       <ul>
         <li>
           Primary responsibilities included development of many backend
           systems as well as maintaining and developing the public APIs
         </li>
-        <li>Developed internal systems and tools</li>
+        <li>Developed internal systems and tools in Ruby and EventMachine</li>
         <li>Teacher of all things Git</li>
       </ul>
 
