@@ -126,7 +126,7 @@ on over to [Part 2][2] for a whirlwind introduction on building your own
 
   [1]: #
   [2]: /log/2012/09/10/Geofencing--Part-2.md
-  [3]: /log/pre/_Geofencing--Part-3.md
+  [3]: /log/2012/09/10/Geofencing--Part-3.md
   [4]: /blog-files/geofence/fence_on_map.png
   [5]: http://blog.notdot.net/2009/11/Damn-Cool-Algorithms-Spatial-indexing-with-Quadtrees-and-Hilbert-Curves
   [6]: http://en.wikipedia.org/wiki/Hilbert_curve
