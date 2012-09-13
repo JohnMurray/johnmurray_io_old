@@ -13,6 +13,12 @@
         <li>GPA: 4.0/4.0</li>
       </ul>
     </div>
+    <div class="content">
+      <p><b>University of Louisville, J. B. Speed School of Engineering</b>, Louisville, KY (2012-Present)</p>
+      <ul>
+        <li>Masters of Science, Computer Science</li>
+      </ul>
+    </div>
   </div>
 
   <div class="section">
