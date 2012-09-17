@@ -1,5 +1,6 @@
 source :rubygems
 
+gem 'builder'
 gem 'haml'
 gem 'less'
 gem 'rdiscount'
