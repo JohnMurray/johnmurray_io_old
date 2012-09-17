@@ -28,7 +28,7 @@ get '/rss' do
                  .gsub('.md', '')
 
           markdown_file = File.open(log).read
-          doc = Maruku.new(markdown_file)
+          doc = RDiscount.new(markdown_file)
 
           xml.item do
             xml.title title
