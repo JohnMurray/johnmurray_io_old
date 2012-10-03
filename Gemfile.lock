@@ -11,6 +11,7 @@ GEM
       commonjs (~> 0.2.6)
     libv8 (3.3.10.4)
     method_source (0.8)
+    newrelic_rpm (3.4.2.1)
     pry (0.9.10)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
@@ -40,6 +41,7 @@ DEPENDENCIES
   builder
   haml
   less
+  newrelic_rpm
   pry
   rack
   rake
