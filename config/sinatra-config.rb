@@ -11,6 +11,9 @@ disable :sessions, :run
 set :raise_errors, Proc.new { settings.environment == :development }
 set :show_exceptions, Proc.new {settings.environment == :development }
 
+configure :production do
+  require 'newrelic_rpm'
+end
 
 
 
