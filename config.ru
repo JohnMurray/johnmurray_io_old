@@ -1,4 +1,4 @@
-require 'bundler/setup'
-require './sinatra-app.rb'
+root = ::File.dirname(__FILE__)
+require ::File.join(root, 'app')
 
-run Sinatra::Application
+run JMApp.new

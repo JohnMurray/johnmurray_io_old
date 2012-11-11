@@ -1,8 +1,8 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    builder (3.0.0)
-    coderay (1.0.7)
+    builder (3.1.4)
+    coderay (1.0.8)
     commonjs (0.2.6)
     daemons (1.1.9)
     eventmachine (1.0.0)
@@ -10,8 +10,8 @@ GEM
     less (2.2.2)
       commonjs (~> 0.2.6)
     libv8 (3.3.10.4)
-    method_source (0.8)
-    newrelic_rpm (3.4.2.1)
+    method_source (0.8.1)
+    newrelic_rpm (3.5.0.1)
     pry (0.9.10)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
@@ -28,7 +28,7 @@ GEM
     slop (3.3.3)
     therubyracer (0.10.2)
       libv8 (~> 3.3.10)
-    thin (1.4.1)
+    thin (1.5.0)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
       rack (>= 1.0.0)
