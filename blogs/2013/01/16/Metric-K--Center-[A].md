@@ -16,24 +16,24 @@ solving for the various values of _k_. The output is then persisted to a MySQL
 database so that the logs can later be analyzed and rendered (by the viewer).
 
 The viewer is just a simple Sinatra app that queries the DB for the latest runs
-and allows you to pick out a specific generation for a paritcular run and value
+and allows you to pick out a specific generation for a particular run and value
 of _k_ and the results are rendered using the [Raphael JS][2] library. 
 
 ### What approaches will be best utilized for solving/estimating the problem?
 
 By approaches I don't mean frameworks or technologies, I am more referring to
-algorithms. For this, I chose to use a copule of different approaches and
-combine them together. The first is a [genetic algorithm][3] (GA) and the 
+algorithms. For this, I chose to use a couple of different approaches and
+combine them together. The first is a [genetic algorithmm][3] (GA) and the 
 second is the [Wisdom of the Crowd][4] (WoC). 
 
 The GA allows me to derive
 solutions rather quickly from an initial, random set of solutions (read
-up on the wikipedia article if you need more information on GAs) but, like all
+up on the Wikipedia article if you need more information on GAs) but, like all
 solutions to NP-C problems it is merely an estimation to the solution. WoC allows us
-generate a consensus from the set of _experts_ (top perfomring members) of a
+generate a consensus from the set of _experts_ (top performing members) of a
 given population of solutions. 
 
-These two approaches will be he main driving factor for our runner. 
+These two approaches will be the main driving factor for our runner. 
 
 ### How fast is it? (because all we care about is speed)
 
@@ -46,9 +46,22 @@ versus MRI Ruby. My choice to go with JRuby is two-fold. The first reason
 is that I get the benefit of _real_-threading. By this I mean that there is
 no GIL and when I run multiple threads, I get the benefit of JVM threads
 (running on multiple cores). This means that I can use libraries like
-[peach][5].
+[peach][5]. The second is faster overall runtime of the runner (regardless
+of whether or not threads are used). 
+
+Since these computations can be ran in parallel and since I have a quad-core
+machine, it only makes sense to run the tasks in parallel across multiple cores.
+However, if you're a Rubyist, then you should be more than familiar with the
+limitations that come along with the GIL. From this, we can see why JRuby, in
+this circumstance, is a much better choice than the current MRI release. 
 
 ### What makes my solution better than other existing solutions?
+
+Nothing really. There's not much novel about my solution, but it was fun and
+I did suffice to learn quite a bit. I've posted the code (for anyone interested)
+on GitHub at [JohnMurray/metric-k-center.git][6]. I've also added a writeup
+of the project (PDF) that is included in the repository if you're inclined
+to know a little more about it.
 
 
   [1]: https://en.wikipedia.org/wiki/Metric_k-center
@@ -56,3 +69,4 @@ no GIL and when I run multiple threads, I get the benefit of JVM threads
   [3]: https://en.wikipedia.org/wiki/Genetic_algorithm
   [4]: https://en.wikipedia.org/wiki/The_Wisdom_of_Crowds
   [5]: http://peach.rubyforge.org/
+  [6]: https://github.com/JohnMurray/metric-k-center
