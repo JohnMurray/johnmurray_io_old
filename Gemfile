@@ -15,7 +15,7 @@ group :development, :production do
   gem 'rake'
   gem 'sinatra'
   gem 'thin'
-  gem 'therubyracer',     '~> 0.11.0'
+  gem 'therubyracer',          '~> 0.11.0beta5'
 end
 
 
