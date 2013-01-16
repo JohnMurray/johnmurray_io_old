@@ -8,14 +8,12 @@ source :rubygems
 group :development, :production do
   gem 'builder'
   gem 'haml'
-  gem 'less'
   gem 'newrelic_rpm'
   gem 'rdiscount'
   gem 'rack'
   gem 'rake'
   gem 'sinatra'
   gem 'thin'
-  gem 'therubyracer',          '~> 0.11.0beta5'
 end
 
 

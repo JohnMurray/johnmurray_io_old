@@ -1,0 +1,277 @@
+/**
+ * Constants
+ */
+/**
+ * Static Mixins
+ */
+/**
+ * Parametric Mixins
+ */
+/**
+ * Global (element) Styles
+ */
+body {
+  color: #333333;
+  margin: 0 auto;
+  font-family: 'Georgia', Times, serif;
+  font-size: 20px;
+  line-height: 1.6em;
+  padding: 0 15px 100px 15px;
+  width: 720px;
+}
+a {
+  color: #333333;
+  text-decoration: none;
+  border-bottom: 1px dotted #333333;
+}
+a:active,
+a:focus,
+a:hover {
+  color: #5b83ad;
+}
+em {
+  font-style: italic;
+}
+strong {
+  font-weight: bold;
+}
+sub {
+  font-size: 80%;
+}
+code {
+  background: whiteSmoke;
+  border: 1px solid #ddd;
+  color: black;
+  display: inline-block;
+  font-family: 'Bitstream Vera Sans Mono', 'Courier', monospace;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0 2px;
+}
+ol {
+  list-style: decimal;
+  margin: 10px 0 10px 60px;
+}
+ul {
+  list-style: square;
+  margin: 10px 0 20px 60px;
+}
+li {
+  margin-bottom: 10px;
+}
+blockquote {
+  margin: 10px 0 10px 60px;
+}
+/*
+ * Style for site-title/back-link at top of each page
+ */
+#page-title {
+  display: block;
+  font-size: 35px;
+  line-height: 1.4em;
+  margin-bottom: 40px;
+  margin-top: 100px;
+}
+#page-title .root-page {
+  display: inline-block;
+}
+#page-title .parent-page {
+  border-bottom: none;
+}
+#page-title .parent-page span {
+  display: inline-block;
+}
+#page-title .current-page {
+  display: inline-block;
+  color: #5b83ad;
+}
+#page-title .rss {
+  display: inline-block;
+  float: right;
+  font-size: 14px;
+  margin-top: 11px;
+}
+/*
+ * Style for optional page description at top of each page
+ */
+#page-description {
+  color: #999999;
+  font-size: 16px;
+  font-style: italic;
+}
+.desc-empty {
+  margin-bottom: 80px;
+}
+.desc-full {
+  margin-bottom: 60px;
+}
+/**
+ * Main page styles
+ */
+#splash-stuff {
+  bottom: 220px;
+  display: block;
+  position: absolute;
+  right: 75px;
+}
+#splash-stuff div.title {
+  display: block;
+  font-size: 60px;
+  line-height: 1.6em;
+  border-bottom: 1px dotted #333333;
+}
+#splash-stuff div.title h1.domain {
+  display: inline-block;
+  color: #333333;
+}
+#splash-stuff div.title span.tld {
+  display: inline-block;
+  color: #5b83ad;
+}
+#splash-stuff div.nav {
+  font-size: 32px;
+  margin-top: 20px;
+}
+#splash-stuff div.nav ul {
+  display: block;
+  float: right;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#splash-stuff div.nav ul li {
+  display: inline-block;
+  margin: 0 0 0 10px;
+  padding: 0;
+}
+#splash-stuff div.nav ul li a {
+  border: none;
+  color: #333333;
+  display: inline-block;
+}
+#splash-stuff div.nav ul li a::before {
+  content: "/";
+  color: #ffffff;
+}
+#splash-stuff div.nav ul li a:active,
+#splash-stuff div.nav ul li a:focus,
+#splash-stuff div.nav ul li a:hover {
+  color: #5b83ad;
+}
+#splash-stuff div.nav ul li a:active::before,
+#splash-stuff div.nav ul li a:focus::before,
+#splash-stuff div.nav ul li a:hover::before {
+  content: "/";
+  color: #333333;
+}
+/*
+ * Log Styles
+ */
+#log-list .log {
+  display: block;
+  margin: 0 0 10px 0;
+}
+#log-list .log .title {
+  display: inline-block;
+  padding: 0 0 3px 0;
+}
+#log-list .log .date {
+  color: #999999;
+  display: inline-block;
+  float: right;
+  font-size: .8em;
+}
+/*
+ * Contact Styles
+ */
+#contact {
+  display: block;
+  margin-top: 100px;
+}
+#contact .email .label {
+  display: inline-block;
+  font-size: 22px;
+  margin: 0 20px 0 0;
+}
+#contact .email .content {
+  color: #999999;
+  font-size: 16px;
+}
+/*
+ * Log-entry (Random-entry) Styles
+ */
+#log-entry {
+  display: block;
+  font-size: 18px;
+  margin-top: 0;
+}
+#log-entry h1 {
+  font-size: 42px;
+  line-height: 2em;
+}
+#log-entry h2 {
+  font-size: 36px;
+  line-height: 1.8em;
+}
+#log-entry h3 {
+  font-size: 32px;
+  line-height: 1.8em;
+}
+#log-entry h4 {
+  font-size: 26px;
+  line-height: 1.8em;
+}
+#log-entry h5 {
+  font-size: 22px;
+  line-height: 1.7em;
+}
+#log-entry p {
+  color: #666666;
+  margin-bottom: 20px;
+}
+#log-entry ul li p {
+  color: inherit;
+  margin: 0;
+}
+/*
+ * Résumé Styles
+ */
+#resume .section {
+  clear: both;
+  display: block;
+}
+#resume .section .heading {
+  display: inline-block;
+  float: left;
+  font-weight: bold;
+  font-size: 20px;
+  width: 20%;
+}
+#resume .section .content {
+  float: right;
+  font-size: 16px;
+  margin: 0 0 30px 0;
+  width: 80%;
+}
+#resume .section .content p {
+  margin: 0;
+  padding: 0;
+}
+#resume .section .content ul {
+  line-height: 1.5em;
+  margin: 0 0 0 30px;
+  padding: 0;
+}
+#resume .section .content .spacer {
+  display: block;
+  margin: 20px 0px;
+}
+/*
+ * GitHub Styles
+ */
+.gist {
+  font-size: 70%;
+  line-height: 1.3em;
+}

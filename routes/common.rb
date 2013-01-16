@@ -10,14 +10,4 @@ class JMApp < Sinatra::Base
     cache_control :public, :max_age => 7200
     @notes = ""
   end
-
-
-
-
-  ##----
-  ## Server LESS CSS files as css
-  ##----
-  get '/css/stylesheet.css' do
-    less :stylesheet
-  end
 end
