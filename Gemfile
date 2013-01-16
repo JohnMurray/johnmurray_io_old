@@ -15,7 +15,7 @@ group :development, :production do
   gem 'rake'
   gem 'sinatra'
   gem 'thin'
-  gem 'libv8',            , '~> 3.8.11'
+  gem 'libv8',            '~> 3.8.11'
   gem 'therubyracer'
 end
 
