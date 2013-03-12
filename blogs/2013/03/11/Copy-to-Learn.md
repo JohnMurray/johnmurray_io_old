@@ -147,7 +147,7 @@ those computed routes (regex's) can be cached and re-used.
 Like I had mentioned previously, this project was to learn. That being said, there
 is probably a lot of debug code and comments left in this project and I would not
 recommend it for production. So, if you do want to play around with it, you might
-have to remove some `echo` and `var_dumps` statements that might still be hanging
+have to remove some `echo` and `var_dump` statements that might still be hanging
 around in the code.
 
 
