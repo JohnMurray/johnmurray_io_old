@@ -28,18 +28,3 @@ youself in a similar position with no real solution or do you even consider
 this to be a problem? Tweet you're comments at 
 `#nothingisinteresting`. Let's start a conversation and see where it
 leads us. That is, if anyone finds this interesting...
-
-
-<br /><br />
-
-### The Conversation
-
-<br />
-<div style="margin:0 auto;width:520px;display:block;">
-<a class="twitter-timeline" data-dnt="true" 
-   href="https://twitter.com/search?q=%23nothingisinteresting" 
-   data-widget-id="311642911047548929">Tweets about "#nothingisinteresting"</a>
-<script>
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-</script>
-</div>
