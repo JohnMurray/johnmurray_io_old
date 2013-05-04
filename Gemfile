@@ -1,4 +1,4 @@
-source :rubygems
+source 'https://rubygems.org'
 
 # You'll notice that there are no versions in here. That's
 # on purpose so that I know that I am staying up to date
