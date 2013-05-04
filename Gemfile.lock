@@ -23,7 +23,7 @@ GEM
     rack-protection (1.5.0)
       rack
     rake (10.0.4)
-    rdiscount (2.0.7.2)
+    rdiscount (1.6.8)
     sinatra (1.4.2)
       rack (~> 1.5, >= 1.5.2)
       rack-protection (~> 1.4)
@@ -47,6 +47,6 @@ DEPENDENCIES
   pry
   rack
   rake
-  rdiscount
+  rdiscount (= 1.6.8)
   sinatra
   thin

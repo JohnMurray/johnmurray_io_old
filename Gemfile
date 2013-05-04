@@ -9,7 +9,7 @@ group :development, :production do
   gem 'builder'
   gem 'haml'
   gem 'newrelic_rpm'
-  gem 'rdiscount'
+  gem 'rdiscount',      '= 1.6.8'
   gem 'rack'
   gem 'rake'
   gem 'sinatra'
