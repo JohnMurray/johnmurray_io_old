@@ -16,10 +16,6 @@ class JMApp < Sinatra::Base
     enable :raise_errors
     enable :show_exceptions
   end
-
-  configure :production do
-    require 'newrelic_rpm'
-  end
 end
 
 
