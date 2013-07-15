@@ -9,7 +9,6 @@ GEM
     haml (4.0.2)
       tilt
     method_source (0.8.1)
-    newrelic_rpm (3.6.1.88)
     pry (0.9.12.1)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
@@ -43,7 +42,6 @@ PLATFORMS
 DEPENDENCIES
   builder
   haml
-  newrelic_rpm
   pry
   rack
   rake

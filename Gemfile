@@ -8,7 +8,6 @@ source 'https://rubygems.org'
 group :development, :production do
   gem 'builder'
   gem 'haml'
-  gem 'newrelic_rpm'
   gem 'rdiscount',      '= 1.6.8'
   gem 'rack'
   gem 'rake'
