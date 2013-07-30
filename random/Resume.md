@@ -36,11 +36,13 @@
 
       <span class="spacer"></span>
 
+      <!--
       <p><b>Tutor</b>, Northern Kentucky University, Highland Heights, KY (2009-2010)</p>
       <ul>
         <li>Provide one on one instruction and assistance to first and second year programming students</li>
         <li>Assist first and second year programming students once weekly in a lab environment working with Python and Java</li>
       </ul>
+      -->
     </div>
   </div>
   
