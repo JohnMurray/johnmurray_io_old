@@ -1,4 +1,48 @@
 <div id="resume">
+
+  <div class="section">
+    <div class="heading">
+      Experience
+    </div>
+    <div class="content">
+      <p><b>Software Engineer</b>, AppNexus, New York, NY(2013-2013)</p>
+      <ul>
+        <li>Developed new APIs for company's mobile initiative</li>
+        <li>Developed mobile-specific data-solutions</li>
+      </ul>
+      <p><b>Software Engineer</b>, ASI, Louisville, KY(2012-2013)</p>
+      <ul>
+        <li>Developed AudoCAD, Revit, and Infrastructure Map Server  solutions for various clients</li>
+        <li>Developed migrations tools for Sage and NetSuite</li>
+        <li>Developed internal resource management and planning tools</li>
+      </ul>
+      <p><b>Software Engineer</b>, Mavizon, Louisville, KY(2011-2012)</p>
+      <ul>
+        <li>
+          Primary responsibilities included development of many backend
+          systems as well as maintaining and developing the public APIs
+        </li>
+        <li>Developed internal systems and tools in Ruby and EventMachine</li>
+        <li>Teacher of all things Git</li>
+      </ul>
+
+      <span class="spacer"></span>
+
+      <p><b>Web Specialist II</b>, Center for Applied Informatics, Highland Heights, KY (2009-2011)</p>
+      <ul>
+        <li>Create and manage custom written web applications in a variety of programming languages including C#, Java, PHP, Ruby, JavaScript, and SQL.</li>
+        <li>Create productivity and automation tools for external and internal use in Ruby and C#</li>
+      </ul>
+
+      <span class="spacer"></span>
+
+      <p><b>Tutor</b>, Northern Kentucky University, Highland Heights, KY (2009-2010)</p>
+      <ul>
+        <li>Provide one on one instruction and assistance to first and second year programming students</li>
+        <li>Assist first and second year programming students once weekly in a lab environment working with Python and Java</li>
+      </ul>
+    </div>
+  </div>
   
   <div class="section">
     <div class="heading">
@@ -52,38 +96,6 @@
     </div>
   </div>
 
-  <div class="section">
-    <div class="heading">
-      Experience
-    </div>
-    <div class="content">
-      <p><b>Software Developer</b>, Mavizon, Louisville, KY(2011-2012)</p>
-      <ul>
-        <li>
-          Primary responsibilities included development of many backend
-          systems as well as maintaining and developing the public APIs
-        </li>
-        <li>Developed internal systems and tools in Ruby and EventMachine</li>
-        <li>Teacher of all things Git</li>
-      </ul>
-
-      <span class="spacer"></span>
-
-      <p><b>Web Specialist II</b>, Center for Applied Informatics, Highland Heights, KY (2009-2011)</p>
-      <ul>
-        <li>Create and manage custom written web applications in a variety of programming languages including C#, Java, PHP, Ruby, JavaScript, and SQL.</li>
-        <li>Create productivity and automation tools for external and internal use in Ruby and C#</li>
-      </ul>
-
-      <span class="spacer"></span>
-
-      <p><b>Tutor</b>, Northern Kentucky University, Highland Heights, KY (2009-2010)</p>
-      <ul>
-        <li>Provide one on one instruction and assistance to first and second year programming students</li>
-        <li>Assist first and second year programming students once weekly in a lab environment working with Python and Java</li>
-      </ul>
-    </div>
-  </div>
   
   <div class="section">
     <div class="heading">
