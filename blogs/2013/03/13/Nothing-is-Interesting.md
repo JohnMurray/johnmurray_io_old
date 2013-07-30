@@ -25,6 +25,4 @@ Does any one else feel this way and, if so, I want to hear your thoughts
 on this. What have you done in the past, have you found something that
 truly interests you and if so what was it? Or, alternatively, do you find
 youself in a similar position with no real solution or do you even consider
-this to be a problem? Tweet you're comments at 
-`#nothingisinteresting`. Let's start a conversation and see where it
-leads us. That is, if anyone finds this interesting...
+this to be a problem? 
