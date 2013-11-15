@@ -224,22 +224,24 @@ blockquote {
   line-height: 1.8em;
 }
 #log-entry h5 {
-  font-size: 22px;
+  font-size:   22px;
   line-height: 1.7em;
 }
 #log-entry p {
-  color: #666666;
+  color:         #666666;
   margin-bottom: 20px;
+  font-family:   "proxima-nova", 'Helvetica', serif;
 }
-#log-entry ul li p {
-  color: inherit;
-  margin: 0;
+#log-entry ul li {
+  color:       inherit;
+  margin:      3px 0 5px 0;
+  font-family: "proxima-nova", 'Helvetica', serif;
 }
 /*
  * Résumé Styles
  */
 #resume .section {
-  clear: both;
+  clear:   both;
   display: block;
 }
 #resume .section .heading {
