@@ -5,8 +5,10 @@
       Experience
     </div>
     <div class="content">
-      <p><b>Software Engineer</b>, AppNexus, New York, NY(2013-2013)</p>
+      <p><b>Software Engineer</b>, AppNexus, New York, NY(2013-Present)</p>
       <ul>
+        <li>Developed new core framework components using Scala, Play, and Akka</li>
+        <li>Improved DB schema-managment with new tooling and workflows</li>
         <li>Developed new APIs for company's mobile initiative</li>
         <li>Developed mobile-specific data-solutions</li>
       </ul>
