@@ -82,7 +82,7 @@ on a schedule. Personally, I subscribe to the [Hacker Newsletter][1] for a weekl
 idea of curated content has several benefits
 
 + The best content is filtered for you, so you spend less time reading uninteresting articles
-+ You save time be getting something once a week vs reading the site every day
++ You save time reading a newsletter once a week vs reading the site every day
 + Because you read less articles, you'll avoid hearing about 20 new frameworks a week and ideally
   read about 1'ish which will hopefully be more worthwhile (since it was theoretically filtered
   from the initial 20)
