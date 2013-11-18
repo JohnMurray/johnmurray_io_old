@@ -92,7 +92,7 @@
 
       <p><b>Miscellaneous Tech</b></p>
       <ul>
-        <li>HTML/XHTML, CSS, JavaScript (jQeury), HAML, Less</li>
+        <li>HTML/XHTML, CSS, JavaScript (jQuery), HAML, Less</li>
         <li>Sinatra, WCF, .NET MVC 3</li>
         <li>MongoDB, MySQL</li>
         <li>Git, Gitosis, SVN</li>
