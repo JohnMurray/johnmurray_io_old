@@ -96,6 +96,7 @@ suite you, you could try several other newsletters as well:
 + [Status Code (General CompSci Weekly News)][5]
 + [Dart Weekly][6]
 + [HTML 5 Weekly][7]
++ [HN Digest][8]
 
 You can also consume multiple newsletters if you'd like but be very careful not to fall back
 into the same trap as with HN. Choose carefully and always think about how you're benefiting
@@ -110,3 +111,4 @@ from each article that you read.
   [5]: http://statuscode.org/
   [6]: http://dartweekly.com/
   [7]: http://html5weekly.com/
+  [8]: http://www.hndigest.com/
