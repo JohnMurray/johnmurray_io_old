@@ -99,6 +99,7 @@ suite you, you could try several other newsletters as well:
 + [HN Digest][8]
 + [iOS Dev Weekly][9]
 + [Android Weekly][10]
++ [Jobety Weekly][11]
 
 You can also consume multiple newsletters if you'd like but be very careful not to fall back
 into the same trap as with HN. Choose carefully and always think about how you're benefiting
@@ -116,3 +117,4 @@ from each article that you read.
   [8]: http://www.hndigest.com/
   [9]: http://iosdevweekly.com/issues
   [10]: http://androidweekly.net
+  [11]: http://jobety.com/
