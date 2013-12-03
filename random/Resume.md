@@ -30,7 +30,7 @@
 
       <span class="spacer"></span>
 
-      <p><b>Web Specialist II</b>, Center for Applied Informatics, Highland Heights, KY (2009-2011)</p>
+      <p><b>Web Specialist II</b>, CAI, Highland Heights, KY (2009-2011)</p>
       <ul>
         <li>Create and manage custom written web applications in a variety of programming languages including C#, Java, PHP, Ruby, JavaScript, and SQL.</li>
         <li>Create productivity and automation tools for external and internal use in Ruby and C#</li>
