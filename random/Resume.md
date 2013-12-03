@@ -76,7 +76,7 @@
     <div class="content">
       <p><b>Programming Languages</b></p>
       <ul>
-        <li>Ruby, C#, Java, PHP, JavaScript, C and C++, Python, SQL</li>
+        <li>Scala, Ruby, C#, Java, PHP, JavaScript, C and C++, Python, SQL</li>
       </ul>
 
       <span class="spacer"></span>
