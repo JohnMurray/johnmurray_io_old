@@ -7,24 +7,24 @@
     <div class="content">
       <p><b>Software Engineer</b>, AppNexus, New York, NY(2013-Present)</p>
       <ul>
-        <li>Developed new core framework components using Scala, Play, and Akka</li>
-        <li>Improved DB schema-managment with new tooling and workflows</li>
-        <li>Developed new APIs for company's mobile initiative</li>
-        <li>Developed mobile-specific data-solutions</li>
+        <li>Developed new core framework components (Scala, Play, Akka)</li>
+        <li>Improved DB schema-managment with new tooling and workflows (Python)</li>
+        <li>Developed new APIs for company's mobile initiative (PHP, Python)</li>
+        <li>Developed mobile-specific data-solutions (Python)</li>
       </ul>
       <p><b>Software Engineer</b>, ASI, Louisville, KY(2012-2013)</p>
       <ul>
-        <li>Developed AudoCAD, Revit, and Infrastructure Map Server  solutions for various clients</li>
-        <li>Developed migrations tools for Sage and NetSuite</li>
-        <li>Developed internal resource management and planning tools</li>
+        <li>Developed AudoCAD, Revit, and Infrastructure Map Server  solutions for various clients (PHP)</li>
+        <li>Developed migrations tools for Sage and NetSuite (C#, JavaScript)</li>
+        <li>Developed internal resource management and planning tools (C#)</li>
       </ul>
       <p><b>Software Engineer</b>, Mavizon, Louisville, KY(2011-2012)</p>
       <ul>
         <li>
           Primary responsibilities included development of many backend
-          systems as well as maintaining and developing the public APIs
+          systems as well as maintaining and developing the public APIs (C#, Ruby, Node.js)
         </li>
-        <li>Developed internal systems and tools in Ruby and EventMachine</li>
+        <li>Developed internal systems and tools in (Ruby, EventMachine)</li>
         <li>Teacher of all things Git</li>
       </ul>
 
@@ -48,6 +48,7 @@
     </div>
   </div>
   
+
   <div class="section">
     <div class="heading">
       Education
@@ -65,37 +66,6 @@
       <p><b>University of Louisville, J. B. Speed School of Engineering</b>, Louisville, KY (2012-Present)</p>
       <ul>
         <li>Masters of Science, Computer Science</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="heading">
-      Skills
-    </div>
-    <div class="content">
-      <p><b>Programming Languages</b></p>
-      <ul>
-        <li>Scala, Ruby, C#, Java, PHP, JavaScript, C and C++, Python, SQL</li>
-      </ul>
-
-      <span class="spacer"></span>
-
-      <p><b>Operating Systems</b></p>
-      <ul>
-        <li>Windows: XP, Vista, 7</li>
-        <li>Linux: Debian-based, RedHat/Fedora-based</li>
-        <li>Mac OS X</li>
-      </ul>
-
-      <span class="spacer"></span>
-
-      <p><b>Miscellaneous Tech</b></p>
-      <ul>
-        <li>HTML/XHTML, CSS, JavaScript (jQuery), HAML, Less</li>
-        <li>Sinatra, WCF, .NET MVC 3</li>
-        <li>MongoDB, MySQL</li>
-        <li>Git, Gitosis, SVN</li>
       </ul>
     </div>
   </div>
