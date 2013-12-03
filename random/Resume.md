@@ -7,24 +7,23 @@
     <div class="content">
       <p><b>Software Engineer</b>, AppNexus, New York, NY(2013-Present)</p>
       <ul>
-        <li>Developed new core framework components (Scala, Play, Akka)</li>
-        <li>Improved DB schema-managment with new tooling and workflows (Python)</li>
-        <li>Developed new APIs for company's mobile initiative (PHP, Python)</li>
-        <li>Developed mobile-specific data-solutions (Python)</li>
+        <li>Developed new core framework components <sub>(Scala, Play, Akka)</sub></li>
+        <li>Improved DB schema-managment with new tooling and workflows <sub>(Python)</sub></li>
+        <li>Developed new APIs for company's mobile initiative <sub>(PHP, Python)</sub></li>
+        <li>Developed mobile-specific data-solutions <sub>(Python)</sub></li>
       </ul>
       <p><b>Software Engineer</b>, ASI, Louisville, KY(2012-2013)</p>
       <ul>
-        <li>Developed AudoCAD, Revit, and Infrastructure Map Server  solutions for various clients (PHP)</li>
-        <li>Developed migrations tools for Sage and NetSuite (C#, JavaScript)</li>
-        <li>Developed internal resource management and planning tools (C#)</li>
+        <li>Developed AudoCAD, Revit, and Infrastructure Map Server  solutions for various clients <sub>(C#, PHP)</sub></li>
+        <li>Developed migrations tools for Sage and NetSuite <sub>(C#, JavaScript)</sub></li>
+        <li>Developed internal resource management and planning tools <sub>(C#)</sub></li>
       </ul>
       <p><b>Software Engineer</b>, Mavizon, Louisville, KY(2011-2012)</p>
       <ul>
         <li>
-          Primary responsibilities included development of many backend
-          systems as well as maintaining and developing the public APIs (C#, Ruby, Node.js)
+          Designed, implemented, and maintained various backend systems and the company's public APIs <sub>(C#, Ruby, Node.js)</sub>
         </li>
-        <li>Developed internal systems and tools in (Ruby, EventMachine)</li>
+        <li>Developed internal systems and tools for data-analysis and offline presentations<sub>(Ruby, EventMachine)</sub></li>
         <li>Teacher of all things Git</li>
       </ul>
 
@@ -32,8 +31,8 @@
 
       <p><b>Web Specialist II</b>, CAI, Highland Heights, KY (2009-2011)</p>
       <ul>
-        <li>Create and manage custom written web applications in a variety of programming languages including C#, Java, PHP, Ruby, JavaScript, and SQL.</li>
-        <li>Create productivity and automation tools for external and internal use in Ruby and C#</li>
+        <li>Created and managed custom written web applications <sub>(C#, Java, PHP, Ruby, JavaScript, SQL)</sub></li>
+        <li>Create productivity and automation tools for external and internal use in <sub>(Ruby, C#)</sub></li>
       </ul>
 
       <span class="spacer"></span>
@@ -63,9 +62,9 @@
       </ul>
     </div>
     <div class="content">
-      <p><b>University of Louisville, J. B. Speed School of Engineering</b>, Louisville, KY (2012-Present)</p>
+      <p><b>University of Louisville, School of Engineering</b>, Louisville, KY (2012-2012)</p>
       <ul>
-        <li>Masters of Science, Computer Science</li>
+        <li>Masters Level Coursework</li>
       </ul>
     </div>
   </div>
