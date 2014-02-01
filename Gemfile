@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.1.0'
+
 # You'll notice that there are no versions in here. That's
 # on purpose so that I know that I am staying up to date
 # with the latest gems and keeping me on my toes. If something
