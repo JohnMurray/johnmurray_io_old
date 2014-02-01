@@ -36,8 +36,14 @@ class JMApp < Sinatra::Base
       'blogs',
       'in-the-works',
       title)
+
+    if File.exist? "#{file_name}.notes"
+      @notes = File.open("#{file_name}.notes").read
+    end
+
     @doc = parse_file(file_name)
     @doc_title = format_title(title)
+
     haml :log_entry
   end
 

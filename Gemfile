@@ -8,7 +8,7 @@ source 'https://rubygems.org'
 group :development, :production do
   gem 'builder'
   gem 'haml'
-  gem 'rdiscount',      '= 1.6.8'
+  gem 'rdiscount',      '>= 2.1.7'
   gem 'rack'
   gem 'rake'
   gem 'sinatra'
