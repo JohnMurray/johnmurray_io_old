@@ -9,7 +9,9 @@ ruby '2.1.0'
 # blog.... meh.
 group :development, :production do
   gem 'builder',        '~> 3.2.2'
+  gem 'dalli',          '~> 2.7.0'
   gem 'haml',           '~> 4.0.5'
+  gem 'kgio',           '~> 2.8.1'    # dalli performance boost
   gem 'rdiscount',      '~> 2.1.7'
   gem 'rack',           '~> 1.5.2'
   gem 'sinatra',        '~> 1.4.4'

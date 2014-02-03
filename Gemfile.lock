@@ -4,9 +4,11 @@ GEM
     builder (3.2.2)
     coderay (1.1.0)
     daemons (1.1.9)
+    dalli (2.7.0)
     eventmachine (1.0.3)
     haml (4.0.5)
       tilt
+    kgio (2.8.1)
     method_source (0.8.2)
     pry (0.9.12.6)
       coderay (~> 1.0)
@@ -34,7 +36,9 @@ PLATFORMS
 
 DEPENDENCIES
   builder (~> 3.2.2)
+  dalli (~> 2.7.0)
   haml (~> 4.0.5)
+  kgio (~> 2.8.1)
   pry
   rack (~> 1.5.2)
   rdiscount (~> 2.1.7)

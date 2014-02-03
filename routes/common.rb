@@ -10,4 +10,21 @@ class JMApp < Sinatra::Base
     cache_control :public, :max_age => 7200
     @notes = ""
   end
+
+
+  ##----
+  ## Try to pull data out of the cache. If the item is not found
+  ## in cache, then return the result from the block passed in.
+  ##----
+  def with_cache(cache_key, &block)
+    result = @cache.get(cache_key)
+
+    unless result
+      result = block.call
+      @cache.set(cache_key, result)
+      STDERR.puts("Cache set for #{cache_key}")
+    end
+
+    result
+  end
 end
