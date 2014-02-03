@@ -1,6 +1,7 @@
 class JMApp < Sinatra::Base
   ##----
-  ## Load a specific random data-set.
+  ## Load a specific page from the list of random (/*) items that
+  ## I have on my website.
   ##----
   get '/*/:name' do
     file_name = File.join('random', params[:name])
