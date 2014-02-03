@@ -13,10 +13,15 @@ group :development, :production do
   gem 'rdiscount',      '~> 2.1.7'
   gem 'rack',           '~> 1.5.2'
   gem 'sinatra',        '~> 1.4.4'
+end
+
+
+group :production do
   gem 'thin',           '~> 1.6.1'
 end
 
 
 group :development do
   gem 'pry'
+  gem 'shotgun'
 end
