@@ -9,17 +9,13 @@ class JMApp < Sinatra::Base
   ##----
   get '/log/pre' do
     with_cache('log-pre') do
-      @files = []
-      regex = /blogs\/in-the-works\/(?<title>.*\.md)/
-      Dir[File.join('blogs', 'in-the-works', '_*.md')].each do |file|
-        match = regex.match file
-        title_url = URI.escape(match[:title], Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))
-        @files << {
-          path:  "/log/pre/#{title_url}",
-          name:  format_title(match[:title]),
-          date:  Time.now
-        }
-      end
+
+      regex = /blogs\/in-the-works\/(?<year>\d+)\/(?<month>\d+)\/(?<day>\d+)\/(?<title>.*\.md)/
+      path = File.join('blogs', 'in-the-works', '**', '_*.md')
+      pre = true
+
+      @files = with_cache('log-pre-file-list') { log_list(path, regex, pre) }
+
       haml :log
     end
   end
@@ -30,13 +26,16 @@ class JMApp < Sinatra::Base
   ## Load a specific 'log entry' that is in the works for review. As the normal
   ## log entries, this is just a markdown file.
   ##----
-  get '/log/pre/*' do
+  get '/log/pre/:year/:month/:day/*' do
     with_cache(request.path_info) do
       title = params[:splat].join('')
 
       file_name = File.join(
         'blogs',
         'in-the-works',
+        params[:year],
+        params[:month],
+        params[:day],
         title)
 
       if File.exist? "#{file_name}.notes"
@@ -57,17 +56,10 @@ class JMApp < Sinatra::Base
   ##----
   get '/log' do
     with_cache('log') do
-      @files = []
+
       regex = /blogs\/(?<year>\d+)\/(?<month>\d+)\/(?<day>\d+)\/(?<title>.*\.md)/
-      Dir[File.join("blogs", "**", "[^_]*.md")].each do |file|
-        match = regex.match file
-        title_url = URI.escape(match[:title], Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))
-        @files << {
-          path:  "/log/#{match[:year]}/#{match[:month]}/#{match[:day]}/#{title_url}",
-          name:  format_title(match[:title]),
-          date:  Time.new(match[:year], match[:month], match[:day])
-        }
-      end
+      path = File.join("blogs", "**", "[^_]*.md")
+      @files = with_cache('log-file-list') { log_list(path, regex) }
 
       haml(:log)
     end
