@@ -27,4 +27,5 @@ class JMApp < Sinatra::Base
 
     result
   end
+
 end

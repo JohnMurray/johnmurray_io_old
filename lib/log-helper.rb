@@ -59,3 +59,4 @@ def log_list(path, regex, pre=false)
   end
   files.sort{|a,b| b[:date] <=> a[:date]}
 end
+
