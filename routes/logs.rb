@@ -82,7 +82,7 @@ class JMApp < Sinatra::Base
   ## that we are parsing and loading into a page.
   ##----
   get '/log/:year/:month/:day/*' do
-    #with_cache(request.path_info) do
+    with_cache(request.path_info) do
       title = params[:splat].join('')
 
       file_name = File.join(
@@ -98,12 +98,10 @@ class JMApp < Sinatra::Base
 
       @doc = parse_file(file_name)
       @doc_title = format_title(title)
-
       @related_logs = related_logs(@doc_title)
-      STDERR.puts @related_logs.map{|l| l[:name]}.join("\n")
 
       haml :log_entry
-    #end
+    end
   end
 
 
@@ -140,7 +138,6 @@ class JMApp < Sinatra::Base
     logs.delete(curr_file)
     top_logs = logs.select{|l| l[:date] > curr_file[:date]}.reverse
 
-    # todo: handle use-case of now current file
     if curr_file
       top_logs.each do |l|
           related_files << l if related_files.count < 3 && title != l[:name]
@@ -153,6 +150,6 @@ class JMApp < Sinatra::Base
       related_files.concat(logs.take(3 - related_files.count)).uniq!
     end
 
-    related_files
+    related_files.sort{|a,b| b[:date] <=> a[:date]}
   end
 end

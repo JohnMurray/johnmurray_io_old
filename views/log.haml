@@ -1,4 +1,4 @@
-%div{:id => 'page-title'}
+#page-title
   %a{:href => '/'}
     %span{:class => 'root-page'} johnmurray.io
   %h1{:class => 'current-page'} /log
@@ -9,9 +9,9 @@
 %div{:id => 'page-description', :class => @notes.empty? ? "desc-empty" : "desc-full"}
   = @notes
 
-%div{:id => 'log-list'}
+#log-list
   - @files.each do |f|
-    %div{:class => 'log'}
+    .log
       %a{:href => f[:path]}
-        %div{:class => 'title'}=f[:name]
-      %div{:class => 'date'}=f[:date].strftime('%Y.%m.%d')
+        .title= f[:name]
+      .date= f[:date].strftime('%Y.%m.%d')

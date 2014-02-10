@@ -253,6 +253,24 @@ blockquote {
   margin:      3px 0 5px 0;
   font-family: "proxima-nova", 'Helvetica', serif;
 }
+
+/*
+ * Log Entry - Related Articles Section
+ */
+#related-logs {
+  margin: 85px 0 0 0;
+}
+#related-logs .section-title {
+  color: #666;
+  font-size: 1.8em;
+  margin: 0 0 15px 0;
+}
+#related-logs .log {
+  font-size: 1.1em;
+  margin: 0 0 0 35px;
+  padding: 5px 0 0 0;
+}
+
 /*
  * Résumé Styles
  */

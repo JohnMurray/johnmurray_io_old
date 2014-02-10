@@ -11,9 +11,13 @@
 %div{:id => 'log-entry'}
   =@doc
 
-%div{:id => 'related-articles'}
-  - @related_logs.each do |l|
-    .log
-      %a{:href => l[:path]}
-        .title=l[:name]
+#related-logs
+  %hr
+  .section-title Related Logs
+  #log-list
+    - @related_logs.each do |l|
+      .log
+        %a{:href => l[:path]}
+          .title=l[:name]
+        .date= l[:date].strftime('%Y.%m.%d')
 
