@@ -54,6 +54,7 @@ class JMApp < Sinatra::Base
 
       @doc = parse_file(file_name)
       @doc_title = format_title(title)
+      @related_logs = related_logs(@doc_title, true)
 
       haml :log_entry
     end

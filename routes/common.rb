@@ -19,7 +19,7 @@ class JMApp < Sinatra::Base
   def with_cache(cache_key, &block)
     result = @cache.get(cache_key)
 
-    unless result
+    if settings.development? || !result
       result = block.call
       @cache.set(cache_key, result)
       STDERR.puts("Cache set for #{cache_key}")
