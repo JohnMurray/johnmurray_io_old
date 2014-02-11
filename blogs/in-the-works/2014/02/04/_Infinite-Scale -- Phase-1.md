@@ -6,18 +6,23 @@ large. The difference in how you design applications for very, _very_ large
 scale is not much different than how it would be when dealing with the same
 system at an _near_ infinite scale (since we can never _actually_ be infinite).
 
-All of my assumptions about how applications are designed in light of such scale
-will be taken from a [white paper][1] out of Amazon by Pat Helland. This paper is
-a great and easy read, but it leaves a lot to be imagined when it comes to knowing
-what such a system would actually look like. So, to that note, that is what I
-will be exploring here. 
+But what does an application designed for near infinite scale really look like?
+Well, luckily for us, Pat Helland from Amazon has a [white paper][1] detailing
+common structure and terminology for applications built at near-infinite scale.
+The paper is a great read (highly recommend) and is easily understandable for the
+non PhD types like myself.
 
-I'll be building a downsized version of an application architecture meant for
-near-infinite scale per the guidelines laid down by Pat Helland. Obviously this
-is not a real-world application and will probably have plenty of holes in the design.
-As the disclaimer says, this is just for fun (and education). However, if you see
-a hole in my design or would like to discuss something further, feel free to email
-me at "me at johnmurray dot io."
+However I should note that what is described in the paper is not quite concrete
+(as one would expect when describing general patterns), so I plan to explore this
+further. So, that is exactly what I'll be doing through this series. I will be
+building a small'ish version of what is described in the white paper to see what
+an application built for near-infinite scale actually looks like.
+
+I should note up-front that this is for learning purposes only. I would not recommend
+using any of the code presented here for production/real-world systems. The
+application will likely have plenty of holes in the design, which is expected for
+a learning exercise such as this. However, if you see a hole in my design or would
+like to discuss something further, feel free to email me at "me at johnmurray dot io."
 
 
 ## Warm-Up
@@ -25,7 +30,7 @@ me at "me at johnmurray dot io."
 A laundry list of items about the project before I get started.
 
 =Source Code=
-    The source is available on GitHub [here][2]. It is broken out into
+    The source is [available on GitHub][2] and is broken out into
     phases (each it's own folder). 
 =Language=
     It's all done in Ruby, but there is not a lot of _fancy_ stuff happening
@@ -33,7 +38,8 @@ A laundry list of items about the project before I get started.
 =Other Tech=
     There really isn't any other tech. I've simplified most things down into
     plain ole' Ruby objects/classes. This means no DBs, queues, caches,
-    load-balancers, cluster-management stuff, etc.
+    load-balancers, cluster-management stuff, etc (at least outside of what
+    is implemented per the project).
 =Phases / Parts=
     I have divided up the project into manageable / digestible parts. Each 
     part in the series will cover one corresponding phase of development 
@@ -53,14 +59,6 @@ data).
 + TODO:  show service-config ru file and Procfile
 + TODO:  show router and updated Procfile
 + TODO:  some end-to-end curl calls 
-
-
-----
-
-## Related Posts
-
-+ Part 2
-+ Part 3
 
 
 
