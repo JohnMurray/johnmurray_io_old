@@ -140,9 +140,16 @@ start contributing to Spray.
 
 Now that I have a plan, I just need to do it. \*fingers crossed!\*
 
+<br />
+<br />
+#### Update
+To follow my progress on the Spray-Router (application level router written in
+Spray), you can follow [this project][5] on GitHub.
+
 
 
   [1]: http://www.ruby-lang.org
   [2]: http://rubyeventmachine.com/
   [3]: http://spray.io
   [4]: https://gitlab.com/gitlab-org/gitlab-ce/tree/master
+  [5]: https://github.com/JohnMurray/router
