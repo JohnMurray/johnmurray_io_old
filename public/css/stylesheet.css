@@ -311,3 +311,6 @@ blockquote {
   font-size: 70%;
   line-height: 1.3em;
 }
+.gist-meta {
+  display: none; 
+}
