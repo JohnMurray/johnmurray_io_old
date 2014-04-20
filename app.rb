@@ -21,6 +21,7 @@ class JMApp < Sinatra::Base
 
   configure do
     enable :static, :logging, :dump_errors
+    set :haml, { :ugly => true }
   end
 
   configure :development do
