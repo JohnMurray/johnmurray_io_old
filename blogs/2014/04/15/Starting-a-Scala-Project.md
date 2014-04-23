@@ -166,6 +166,15 @@ this template simply via:
 <script src="https://gist.github.com/JohnMurray/11116775.js?file=clone-repo.sh">
 </script>
 
+Or, you can clone the repository and add the `scala-new` script to your path which is
+located in the root of the project. With this you can simply do
+
+<script src="https://gist.github.com/JohnMurray/11116775.js?file=scala-new.sh">
+</script>
+
+This script will take care of updating the repo, creating a directory, and copying
+over all the necessary files. Easy peasy. 
+
 If you find this useful (and I hope you do) then please fork [my repo][1] and customize
 it to suite your needs. Feel free to send pull requests if you think I am missing
 something awesome that you feel every Scala project should include.
