@@ -7,6 +7,15 @@ some of the things that I do for each new project.
 > __Spoiler__ - I have created a GitHub repo [basic-scala-template][1] that 
 > contains everything that is mentioned here.
 
+## A Note on Activator
+
+The wonderful people at Typesafe have a project called [Activator][6] which
+is a nice little tool that, among other things, allows you to get started quickly
+by selecting a base template. While this is useful and there are some good
+templates, I still prefer to manage my own template. This allows me to make some
+additions that are missing from the Activator templates and setup my projects
+in a way that work best for me.
+
 ## SBT
 
 I setup all my projects as a standard SBT project (because why wouldn't you)
@@ -172,3 +181,4 @@ __Enjoy!__
   [3]: https://github.com/mpeltonen/sbt-idea
   [4]: http://travis-ci.org
   [5]: http://www.scalastyle.org/
+  [6]: http://www.typesafe.com/activator
