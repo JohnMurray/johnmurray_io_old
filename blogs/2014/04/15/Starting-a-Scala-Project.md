@@ -87,8 +87,9 @@ things that I like to include as part of every build configuration.
 
   <dt>Revolver</dt>
   <dd>
-    Even though we added the `sbt-revolver` plugin to our `plugins.sbt` file earlier
-    we still need to add the settings to our build to fully install it.
+    Even though we added the <code>sbt-revolver</code> plugin to our 
+    <code>plugins.sbt</code> file earlier we still need to add the settings to 
+    our build to fully install it.
   </dd>
 </dl>
 
@@ -140,7 +141,7 @@ As a final note, I like to add some basic files that I put in most projects:
   <dt><code>.gitignore</code></dt>
   <dd>
     The baiscs for scala projects as well as IntelliJ project-files and general
-    files (like `.swp` files and what not)
+    files (like <code>.swp</code> files and what not)
   </dd>
 
   <dt><code>readme.md</code></dt>
