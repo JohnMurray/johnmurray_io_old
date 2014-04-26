@@ -7,6 +7,9 @@ some of the things that I do for each new project.
 > __Spoiler__ - I have created a GitHub repo [basic-scala-template][1] that 
 > contains everything that is mentioned here.
 
+> __Note__ - Based on feedback, I have listed updates to the template
+> at the bottom of this post.
+
 ## A Note on Activator
 
 The wonderful people at Typesafe have a project called [Activator][6] which
@@ -183,6 +186,20 @@ something awesome that you feel every Scala project should include.
 __Enjoy!__
 
 
+<br /><br />
+
+## Update #1
+
+Thanks to a comment by [predef][7] on reddit, I have removed the sbt-launcher jar from
+my project along with my custom sbt script in favor of using the [sbt-extra][8] script
+and creating a `project/build.properties` file.
+
+The second suggestion was to remove the `sbt-idea` plugin from the project and move it
+into my global plugins (that's a thing?!) which is a fantastic idea. So I have now created
+the file `~/.sbt/0.13/plugins/intellij.sbt` that contains the `addPlugin...` that we used
+earlier in the `plugins.sbt` file for the `sbt-idea` plugin.
+
+
 
 
 
@@ -192,3 +209,5 @@ __Enjoy!__
   [4]: http://travis-ci.org
   [5]: http://www.scalastyle.org/
   [6]: http://www.typesafe.com/activator
+  [7]: http://www.reddit.com/user/predef
+  [8]: https://github.com/paulp/sbt-extras
