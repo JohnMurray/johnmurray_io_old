@@ -192,12 +192,16 @@ __Enjoy!__
 
 Thanks to a comment by [predef][7] on reddit, I have removed the sbt-launcher jar from
 my project along with my custom sbt script in favor of using the [sbt-extra][8] script
-and creating a `project/build.properties` file.
+and creating a `project/build.properties` file. You now must simply use the sbt script
+`./sbt` and the correct version of SBT will be downloaded for you.
 
 The second suggestion was to remove the `sbt-idea` plugin from the project and move it
 into my global plugins (that's a thing?!) which is a fantastic idea. So I have now created
 the file `~/.sbt/0.13/plugins/intellij.sbt` that contains the `addPlugin...` that we used
-earlier in the `plugins.sbt` file for the `sbt-idea` plugin.
+earlier in the `plugins.sbt` file for the `sbt-idea` plugin. Now the project can be more
+agnostic to what editor is used. Do note that if you still want to use the IntelliJ SBT
+plugin that you'll need to add that to your global plugins as the script/template will not
+handle that for you.
 
 
 
